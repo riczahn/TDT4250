@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: no.ntnu.tdt4250.testsuite
+Bundle-SymbolicName: no.ntnu.tdt4250.testsuite; singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Require-Bundle: org.eclipse.emf.ecore

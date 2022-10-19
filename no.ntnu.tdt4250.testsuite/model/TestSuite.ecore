@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="testsuite" nsURI="platform://plugin/no.ntnu.tdt4250.testsuite/TestSuite.ecore"
+    nsPrefix="">
+  <eClassifiers xsi:type="ecore:EClass" name="TestSuite">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testCases" upperBound="-1"
+        eType="#//TestCase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TestCase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testSteps" upperBound="-1"
+        eType="#//TestStep"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TestStep">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="APIRequest" eSuperTypes="#//TestStep">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endpoint" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contentType" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="accept" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//AbstractParameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assertions" upperBound="-1"
+        eType="#//Assertion"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractParameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterLocation" lowerBound="1"
+        eType="#//ParameterLocation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//AbstractParameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InferrableParameter" eSuperTypes="#//AbstractParameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="testStepId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Assertion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="errorMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatusAssertion" eSuperTypes="#//Assertion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="successfulCodes" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ParameterLocation">
+    <eLiterals name="path"/>
+    <eLiterals name="query" value="1"/>
+    <eLiterals name="header" value="2"/>
+    <eLiterals name="body" value="3"/>
+    <eLiterals name="formData" value="4"/>
+  </eClassifiers>
+</ecore:EPackage>
