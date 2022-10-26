@@ -5,46 +5,53 @@
   <eClassifiers xsi:type="ecore:EClass" name="TestSuite">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testCases" upperBound="-1"
-        eType="#//TestCase"/>
+        eType="#//TestCase" containment="true" eOpposite="#//TestCase/testSuite"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TestCase">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testSteps" upperBound="-1"
-        eType="#//TestStep"/>
+        eType="#//TestStep" containment="true" eOpposite="#//TestStep/testCase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testSuite" eType="#//TestSuite"
+        eOpposite="#//TestSuite/testCases"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TestStep">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testCase" eType="#//TestCase"
+        eOpposite="#//TestCase/testSteps"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="APIRequest" eSuperTypes="#//TestStep">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endpoint" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contentType" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="accept" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="#//Method"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
-        eType="#//AbstractParameter"/>
+        eType="#//InferrableParameter" containment="true" eOpposite="#//InferrableParameter/apiRequest"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assertions" upperBound="-1"
-        eType="#//Assertion"/>
+        eType="#//Assertion" containment="true" eOpposite="#//Assertion/apiRequest"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="headers" upperBound="-1"
+        eType="#//Header" containment="true" eOpposite="#//Header/apiRequest"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractParameter">
+  <eClassifiers xsi:type="ecore:EClass" name="Header">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="apiRequest" eType="#//APIRequest"
+        eOpposite="#//APIRequest/headers"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InferrableParameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterLocation" lowerBound="1"
         eType="#//ParameterLocation"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//AbstractParameter">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InferrableParameter" eSuperTypes="#//AbstractParameter">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="apiRequest" eType="#//APIRequest"
+        eOpposite="#//APIRequest/parameters"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="testStepId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="propertyName" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="jsonPath" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Assertion">
+  <eClassifiers xsi:type="ecore:EClass" name="Assertion" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="errorMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="apiRequest" eType="#//APIRequest"
+        eOpposite="#//APIRequest/assertions"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StatusAssertion" eSuperTypes="#//Assertion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="successfulCodes" upperBound="-1"
@@ -56,5 +63,12 @@
     <eLiterals name="header" value="2"/>
     <eLiterals name="body" value="3"/>
     <eLiterals name="formData" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Method">
+    <eLiterals name="GET"/>
+    <eLiterals name="POST" value="1"/>
+    <eLiterals name="DELETE" value="2"/>
+    <eLiterals name="PUT" value="3"/>
+    <eLiterals name="HEAD" value="4"/>
   </eClassifiers>
 </ecore:EPackage>
