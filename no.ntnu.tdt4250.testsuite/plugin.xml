@@ -13,5 +13,12 @@
             class="no.ntnu.tdt4250.testsuite.TestsuitePackage"
             genModel="model/TestSuite.genmodel"/>
    </extension>
+   <extension
+         point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            class="/no.ntnu.tdt4250.testsuite/src/no/ntnu/tdt4250/testsuite/impl/TestsuiteFactoryImpl.java"
+            type="testsuite">
+      </parser>
+   </extension>
 
 </plugin>
