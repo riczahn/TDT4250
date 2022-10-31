@@ -31,7 +31,8 @@
       ],
       "assertions": {
         "successfulCodes": [
-          200
+          200,
+          202
         ]
       },
       "uri": "https://api.ionos.com/cloudapi/v5/datacenters/{datacenterId}?pretty=true&depth=0"
