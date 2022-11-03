@@ -1,6 +1,20 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: no.ntnu.tdt4250.testsuite
-Bundle-SymbolicName: no.ntnu.tdt4250.testsuite; singleton:=true
-Bundle-Version: 0.1.0.qualifier
-Require-Bundle: org.eclipse.emf.ecore
+Bundle-Name: %pluginName
+Bundle-SymbolicName: no.ntnu.tdt4250.testsuite;singleton:=true
+Automatic-Module-Name: no.ntnu.tdt4250.testsuite
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: no.ntnu.tdt4250.testsuite,
+ no.ntnu.tdt4250.testsuite.impl,
+ no.ntnu.tdt4250.testsuite.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emfcloud.emfjson-jackson;bundle-version="2.1.0",
+ com.fasterxml.jackson.core.jackson-core;bundle-version="2.13.2",
+ com.fasterxml.jackson.core.jackson-annotations;bundle-version="2.13.2",
+ com.fasterxml.jackson.core.jackson-databind;bundle-version="2.13.2"
+Bundle-ActivationPolicy: lazy

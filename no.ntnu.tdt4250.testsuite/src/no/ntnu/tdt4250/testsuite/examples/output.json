@@ -1,0 +1,28 @@
+{
+  "eClass" : "platform://plugin/no.ntnu.tdt4250.testsuite/TestSuite.ecore#//TestSuite",
+  "name" : "test suite 1 ",
+  "testCases" : [ {
+    "name" : "test case 1",
+    "testSteps" : [ {
+      "eClass" : "platform://plugin/no.ntnu.tdt4250.testsuite/TestSuite.ecore#//APIRequest",
+      "uri" : "https://api.ionos.com/cloudapi/v5/datacenters?pretty=true&depth=0",
+      "method" : "POST",
+      "assertions" : [ {
+        "eClass" : "platform://plugin/no.ntnu.tdt4250.testsuite/TestSuite.ecore#//StatusAssertion",
+        "errorMessage" : "Expected response code 200",
+        "successfulCodes" : [ 200 ]
+      } ],
+      "body" : "{\"properties\":{\"location\":\"us\\/las\"}}",
+      "headers" : [ {
+        "key" : "Accept",
+        "value" : "application/json"
+      }, {
+        "key" : "Authentication",
+        "value" : "dGVzdHVzZXI6cGFzc3dvcmQ="
+      }, {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      } ]
+    } ]
+  } ]
+}
