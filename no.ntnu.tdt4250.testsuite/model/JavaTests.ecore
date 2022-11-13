@@ -11,6 +11,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="#//Visibility"
         defaultValueLiteral="PACKAGE_PRIVATE"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="setUpMethod" eType="#//Method"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testMethods" upperBound="-1"
+        eType="#//Method"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Method">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="#//Visibility"
