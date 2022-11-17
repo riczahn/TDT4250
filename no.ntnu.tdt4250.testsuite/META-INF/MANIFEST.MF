@@ -10,11 +10,18 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: no.ntnu.tdt4250.testsuite,
  no.ntnu.tdt4250.testsuite.impl,
- no.ntnu.tdt4250.testsuite.util
+ no.ntnu.tdt4250.testsuite.util,
+ JavaModel,
+ JavaModel.impl,
+ JavaModel.util,
+ testsuite,
+ testsuite.impl,
+ testsuite.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emfcloud.emfjson-jackson;bundle-version="2.1.0",
  com.fasterxml.jackson.core.jackson-core;bundle-version="2.13.2",
  com.fasterxml.jackson.core.jackson-annotations;bundle-version="2.13.2",
- com.fasterxml.jackson.core.jackson-databind;bundle-version="2.13.2"
+ com.fasterxml.jackson.core.jackson-databind;bundle-version="2.13.2",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.17.0"
 Bundle-ActivationPolicy: lazy

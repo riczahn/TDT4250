@@ -10,9 +10,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="package" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="#//Visibility"
         defaultValueLiteral="PACKAGE_PRIVATE"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="setUpMethod" eType="#//Method"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testMethods" upperBound="-1"
-        eType="#//Method"/>
+        eType="#//Method" containment="true" eOpposite="#//Method/testClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Method">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="#//Visibility"
@@ -23,9 +22,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="annotations" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
-        eType="#//Statement"/>
+        eType="#//Statement" containment="true" eOpposite="#//Statement/method"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testClass" eType="#//TestClass"
+        eOpposite="#//TestClass/testMethods"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Statement" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//Method"
+        eOpposite="#//Method/statements"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LineStatement" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineContent" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
