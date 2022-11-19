@@ -6,19 +6,28 @@
 
 <plugin>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated TestSuite -->
-      <package
-            uri="platform://plugin/no.ntnu.tdt4250.testsuite/TestSuite.ecore"
-            class="no.ntnu.tdt4250.testsuite.TestsuitePackage"
-            genModel="model/TestSuite.genmodel"/>
-   </extension>
    <extension
          point="org.eclipse.emf.ecore.extension_parser">
       <parser
             class="/no.ntnu.tdt4250.testsuite/src/no/ntnu/tdt4250/testsuite/impl/TestsuiteFactoryImpl.java"
             type="testsuite">
       </parser>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated JavaTests -->
+      <package
+            uri="platform://plugin/no.ntnu.tdt4250.testsuite/JavaTests.ecore"
+            class="JavaModel.JavaModelPackage"
+            genModel="model/JavaTests.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated TestSuite -->
+      <package
+            uri="platform://plugin/no.ntnu.tdt4250.testsuite/TestSuite.ecore"
+            class="testsuite.TestsuitePackage"
+            genModel="model/TestSuite.genmodel"/>
    </extension>
 
 </plugin>
