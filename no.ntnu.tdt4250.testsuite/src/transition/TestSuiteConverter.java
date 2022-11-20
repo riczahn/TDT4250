@@ -29,6 +29,10 @@ import testsuite.TestsuitePackage;
 
 
 public class TestSuiteConverter {
+	
+	public static final String EXAMPLES_FOLDER = "../no.ntnu.tdt4250.examples/";
+	public static final String EXAMPLE_TEST_SUITE_FILE = EXAMPLES_FOLDER + "ExampleTestSuite.xmi";
+	
 	public static void main(String[] args) throws IOException {
 		TestSuite testSuite = loadTestSuite();
 		
@@ -44,8 +48,6 @@ public class TestSuiteConverter {
 		Resource javaModelResource = new XMIResourceFactoryImpl().createResource(URI.createURI("ExampleTestSuiteJavaModel.xmi"));
 		javaModelResource.getContents().add(testClass);
 		try {
-			// TODO: Fix this
-			// The object 'JavaModel.impl.MethodImpl@7722c3c3 (visibility: PACKAGE_PRIVATE, name: Create and Get Teacher, returnType: VOID, annotations: null)' is not contained in a resource
 			javaModelResource.save(System.out, null);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -61,7 +63,7 @@ public class TestSuiteConverter {
 		.getExtensionToFactoryMap()
 		.put("xmi", new XMIResourceFactoryImpl());
 		
-		Resource resource = resourceSet.getResource(URI.createURI("../no.ntnu.tdt4250.examples/ExampleTestSuite.xmi"), true);
+		Resource resource = resourceSet.getResource(URI.createURI(EXAMPLE_TEST_SUITE_FILE), true);
 		return (TestSuite) resource.getContents().get(0);
 	}
 	
