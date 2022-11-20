@@ -8,9 +8,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: no.ntnu.tdt4250.testsuite,
- no.ntnu.tdt4250.testsuite.impl,
- no.ntnu.tdt4250.testsuite.util,
+Export-Package: testsuite,
+ testsuite.impl,
+ testsuite.util,
  JavaModel,
  JavaModel.impl,
  JavaModel.util,
@@ -23,5 +23,5 @@ Require-Bundle: org.eclipse.core.runtime,
  com.fasterxml.jackson.core.jackson-core;bundle-version="2.13.2",
  com.fasterxml.jackson.core.jackson-annotations;bundle-version="2.13.2",
  com.fasterxml.jackson.core.jackson-databind;bundle-version="2.13.2",
- org.eclipse.emf.ecore.xmi;bundle-version="2.17.0"
+ org.eclipse.emf.ecore.xmi;bundle-version="2.16.0"
 Bundle-ActivationPolicy: lazy
