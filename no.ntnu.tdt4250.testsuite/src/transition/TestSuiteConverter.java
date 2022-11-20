@@ -8,8 +8,6 @@ import java.util.stream.Collectors;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
 import JavaModel.LineStatement;
@@ -24,17 +22,14 @@ import testsuite.StatusAssertion;
 import testsuite.TestCase;
 import testsuite.TestStep;
 import testsuite.TestSuite;
-import testsuite.TestsuitePackage;
+import transition.io.FileHelper;
 
 
 
 public class TestSuiteConverter {
 	
-	public static final String EXAMPLES_FOLDER = "../no.ntnu.tdt4250.examples/";
-	public static final String EXAMPLE_TEST_SUITE_FILE = EXAMPLES_FOLDER + "ExampleTestSuite.xmi";
-	
 	public static void main(String[] args) throws IOException {
-		TestSuite testSuite = loadTestSuite();
+		TestSuite testSuite = FileHelper.loadTestSuite();
 		
 		// convert instance of TestSuite to instance of JavaModel
 		TestClass testClass = JavaModelFactoryImpl.eINSTANCE.createTestClass();
@@ -45,26 +40,7 @@ public class TestSuiteConverter {
 			testClass.getTestMethods().add(testMethod);
 		}
 		
-		Resource javaModelResource = new XMIResourceFactoryImpl().createResource(URI.createURI("ExampleTestSuiteJavaModel.xmi"));
-		javaModelResource.getContents().add(testClass);
-		try {
-			javaModelResource.save(System.out, null);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-	}
-	
-	static TestSuite loadTestSuite() {
-		ResourceSet resourceSet = new ResourceSetImpl();
-		resourceSet.getPackageRegistry().put(TestsuitePackage.eNS_URI, TestsuitePackage.eINSTANCE);
-		
-		resourceSet.getResourceFactoryRegistry()
-		.getExtensionToFactoryMap()
-		.put("xmi", new XMIResourceFactoryImpl());
-		
-		Resource resource = resourceSet.getResource(URI.createURI(EXAMPLE_TEST_SUITE_FILE), true);
-		return (TestSuite) resource.getContents().get(0);
+		FileHelper.saveTestClass(testClass);
 	}
 	
 	static Method convertTestCaseToMethod(TestCase testCase) {
