@@ -20,8 +20,10 @@ public class TestSuiteConverter {
 		TestClass testClass = JavaModelFactoryImpl.eINSTANCE.createTestClass();
 		testClass.setName(testSuite.getName());
 		
+		TestCaseHandler testCaseHandler = new TestCaseHandler();
+		
 		for(TestCase testCase : testSuite.getTestCases()) {
-			Method testMethod = TestCaseHandler.convertTestCaseToMethod(testCase);
+			Method testMethod = testCaseHandler.convertTestCaseToMethod(testCase);
 			testClass.getTestMethods().add(testMethod);
 		}
 		

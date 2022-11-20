@@ -19,7 +19,7 @@ import testsuite.TestStep;
 
 public class TestCaseHandler {
 	
-	public static Method convertTestCaseToMethod(TestCase testCase) {
+	public Method convertTestCaseToMethod(TestCase testCase) {
 		Method testMethod = JavaModelFactoryImpl.eINSTANCE.createMethod();
 		
 		// process each request of the test case
@@ -37,14 +37,14 @@ public class TestCaseHandler {
 		return testMethod;
 	}
 	
-	public static List<Statement> convertTestStepToStatements(TestStep testStep) {
+	public List<Statement> convertTestStepToStatements(TestStep testStep) {
 		if (testStep instanceof APIRequest) {
 			return convertApiRequestToStatements((APIRequest) testStep);
 		}
 		throw new UnsupportedOperationException("Currently we can't process normal TestSteps.");
 	}
 	
-	public static List<Statement> convertApiRequestToStatements(APIRequest testStep) {
+	public List<Statement> convertApiRequestToStatements(APIRequest testStep) {
 		switch(testStep.getMethod()) {
 			case GET: return convertGetRequestToStatements(testStep);
 			case POST: return convertPostRequestToStatements(testStep);
@@ -55,7 +55,7 @@ public class TestCaseHandler {
 		
 	}
 	
-	static List<Statement> convertGetRequestToStatements(APIRequest testStep) {
+	public List<Statement> convertGetRequestToStatements(APIRequest testStep) {
 		List<Statement> statements = addStatementsForHttpClient(testStep);
 		statements.addAll(addHeaders(testStep.getHeaders()));
 		
@@ -66,35 +66,7 @@ public class TestCaseHandler {
 		return statements;
 	}
 	
-	public static List<Statement> convertPostRequestToStatements(APIRequest testStep) {
-		List<Statement> statements = addStatementsForHttpClient(testStep);
-		
-		LineStatement setBodyStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
-		String body = "String body = \"" + testStep.getBody() + "\";";
-		setBodyStatement.setLineContent(body);
-		statements.add(setBodyStatement);
-		
-		statements.addAll(addHeaders(testStep.getHeaders()));
-		
-		statements.add(addRequestExecutionStatement());
-		
-		statements.addAll(addAssertionStatements(testStep));
-		
-		return statements;
-	}
-	
-	public static List<Statement> convertDeleteRequestToStatements(APIRequest testStep) {
-		List<Statement> statements = addStatementsForHttpClient(testStep);
-		statements.addAll(addHeaders(testStep.getHeaders()));
-		
-		statements.add(addRequestExecutionStatement());
-		
-		statements.addAll(addAssertionStatements(testStep));
-		
-		return statements;
-	}
-	
-	public static List<Statement> convertPutRequestToStatements(APIRequest testStep) {
+	public List<Statement> convertPostRequestToStatements(APIRequest testStep) {
 		List<Statement> statements = addStatementsForHttpClient(testStep);
 		
 		LineStatement setBodyStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
@@ -111,7 +83,35 @@ public class TestCaseHandler {
 		return statements;
 	}
 	
-	public static List<Statement> addStatementsForHttpClient(APIRequest testStep) {
+	public List<Statement> convertDeleteRequestToStatements(APIRequest testStep) {
+		List<Statement> statements = addStatementsForHttpClient(testStep);
+		statements.addAll(addHeaders(testStep.getHeaders()));
+		
+		statements.add(addRequestExecutionStatement());
+		
+		statements.addAll(addAssertionStatements(testStep));
+		
+		return statements;
+	}
+	
+	public List<Statement> convertPutRequestToStatements(APIRequest testStep) {
+		List<Statement> statements = addStatementsForHttpClient(testStep);
+		
+		LineStatement setBodyStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
+		String body = "String body = \"" + testStep.getBody() + "\";";
+		setBodyStatement.setLineContent(body);
+		statements.add(setBodyStatement);
+		
+		statements.addAll(addHeaders(testStep.getHeaders()));
+		
+		statements.add(addRequestExecutionStatement());
+		
+		statements.addAll(addAssertionStatements(testStep));
+		
+		return statements;
+	}
+	
+	public List<Statement> addStatementsForHttpClient(APIRequest testStep) {
 		List<Statement> statements = new ArrayList<>();
 		
 		LineStatement createHttpClientStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
@@ -145,20 +145,20 @@ public class TestCaseHandler {
 		return statements;
 	}
 	
-	public static List<Statement> addHeaders(List<Header> headers) {
+	public List<Statement> addHeaders(List<Header> headers) {
 		List<Statement> statements = new ArrayList<>();
 		
 		return statements;
 	}
 	
-	public static Statement addRequestExecutionStatement() {
+	public Statement addRequestExecutionStatement() {
 		LineStatement executeRequestStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
 		String executeRequest = "var response = httpClient.execute(httpRequest);";
 		executeRequestStatement.setLineContent(executeRequest);
 		return executeRequestStatement;
 	}
 	
-	public static List<Statement> addAssertionStatements(APIRequest testStep) {
+	public List<Statement> addAssertionStatements(APIRequest testStep) {
 		List<Statement> assertionStatements = new ArrayList<>();
 		
 		for (Assertion assertion : testStep.getAssertions()) {
@@ -172,7 +172,7 @@ public class TestCaseHandler {
 		return assertionStatements;
 	}
 	
-	public static Statement addStatusCodeAssertion(StatusAssertion statusAssertion) {
+	public Statement addStatusCodeAssertion(StatusAssertion statusAssertion) {
 		LineStatement assertionStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
 		
 		StringBuilder assertion = new StringBuilder();
