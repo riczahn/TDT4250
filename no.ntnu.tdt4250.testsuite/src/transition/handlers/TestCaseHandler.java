@@ -36,6 +36,9 @@ public class TestCaseHandler {
 			testMethod.getStatements().add(newLineStatement);
 		}
 		
+		// TODO: Here are annotations missing. Each method needs the @Test annotation
+		// don't forget to add the import 'org.junit.jupiter.api.Test'
+		
 		return testMethod;
 	}
 	

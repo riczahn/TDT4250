@@ -15,6 +15,16 @@ import testsuite.TestStep;
 
 public class TestStepHandler {
 	
+	private final DependencyHandler dependencyHandler;
+	
+	public TestStepHandler() {
+		this(new DependencyHandler());
+	}
+	
+	public TestStepHandler(DependencyHandler importHandler) {
+		this.dependencyHandler = importHandler;
+	}
+	
 	public List<Statement> convertTestStepToStatements(TestStep testStep) {
 		if (testStep instanceof APIRequest) {
 			return convertApiRequestToStatements((APIRequest) testStep);
@@ -24,6 +34,8 @@ public class TestStepHandler {
 	}
 	
 	private List<Statement> convertApiRequestToStatements(APIRequest testStep) {
+		// TODO: It might make sense to create an abstract Class RequestHandler and then for each method a realisation
+		// could reduce the complexity a lot
 		switch(testStep.getMethod()) {
 			case GET: return convertGetRequestToStatements(testStep);
 			case POST: return convertPostRequestToStatements(testStep);
@@ -53,6 +65,8 @@ public class TestStepHandler {
 		setBodyStatement.setLineContent(body);
 		statements.add(setBodyStatement);
 		
+		// TODO: The body needs to be wrapped into a StringEntity and added to the Request
+		
 		statements.addAll(addHeaders(testStep.getHeaders()));
 		
 		statements.add(addRequestExecutionStatement());
@@ -81,6 +95,8 @@ public class TestStepHandler {
 		setBodyStatement.setLineContent(body);
 		statements.add(setBodyStatement);
 		
+		// TODO: The body needs to be wrapped into a StringEntity and added to the Request
+		
 		statements.addAll(addHeaders(testStep.getHeaders()));
 		
 		statements.add(addRequestExecutionStatement());
@@ -98,21 +114,27 @@ public class TestStepHandler {
 		createHttpClientStatement.setLineContent(createHttpClient);
 		statements.add(createHttpClientStatement);
 		
+		dependencyHandler.addDependency("org.apache.hc.client5.http.classic.HttpClient");
+		
 		LineStatement createHttpRequestStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
 		String createHttpRequest;
 		
 		switch(testStep.getMethod()) {
 		case DELETE:
-			createHttpRequest = "HttpDelete httpRequest = new HttpDelete(\"" + testStep.getUri() + "\");";
+			createHttpRequest = "var httpRequest = new HttpDelete(\"" + testStep.getUri() + "\");";
+			dependencyHandler.addDependency("org.apache.hc.client5.http.classic.methods.HttpDelete");
 			break;
 		case GET:
-			createHttpRequest = "HttpGet httpRequest = new HttpGet(\"" + testStep.getUri() + "\");";
+			createHttpRequest = "var httpRequest = new HttpGet(\"" + testStep.getUri() + "\");";
+			dependencyHandler.addDependency("org.apache.hc.client5.http.classic.methods.HttpGet");
 			break;
 		case POST:
-			createHttpRequest = "HttpPost httpRequest = new HttpPost(\"" + testStep.getUri() + "\");";
+			createHttpRequest = "var httpRequest = new HttpPost(\"" + testStep.getUri() + "\");";
+			dependencyHandler.addDependency("org.apache.hc.client5.http.classic.methods.HttpPost");
 			break;
 		case PUT:
-			createHttpRequest = "HttpPut httpRequest = new HttpPut(\"" + testStep.getUri() + "\");";
+			createHttpRequest = "var httpRequest = new HttpPut(\"" + testStep.getUri() + "\");";
+			dependencyHandler.addDependency("org.apache.hc.client5.http.classic.methods.HttpPut");
 			break;
 		default:
 			throw new UnsupportedOperationException("We didn't implement this HTTP Method yet. Whoops");
@@ -126,6 +148,10 @@ public class TestStepHandler {
 	
 	private List<Statement> addHeaders(List<Header> headers) {
 		List<Statement> statements = new ArrayList<>();
+		
+		// TODO: Add headers
+		// Always Accept: application/json
+		// If we send data, then also Content-Type: application/json
 		
 		return statements;
 	}
@@ -165,8 +191,18 @@ public class TestStepHandler {
 		assertion.append(codes).append(");");
 		
 		assertionStatement.setLineContent(assertion.toString());
+		
+		dependencyHandler.addStaticDependency("org.assertj.core.api.Assertions.assertThat");
+		
 		return assertionStatement;
 		
+	}
+	
+	public List<String> getNecessaryImports() {
+		// TODO: This method is not used yet. Connect it to the rest
+		// Also remember that at some point we might need to merge the import statements generated for multiple methods
+		// that means that an import could be there twice. Either add merge logic or convert it to a Set (no duplicates allowed)
+		return dependencyHandler.getImportStatements();
 	}
 
 }
