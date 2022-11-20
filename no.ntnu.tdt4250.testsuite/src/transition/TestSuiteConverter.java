@@ -1,4 +1,4 @@
-package JavaModel.transition;
+package transition;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -61,7 +61,7 @@ public class TestSuiteConverter {
 		.getExtensionToFactoryMap()
 		.put("xmi", new XMIResourceFactoryImpl());
 		
-		Resource resource = resourceSet.getResource(URI.createURI(TestSuiteConverter.class.getResource("ExampleTestSuite.xmi").toString()), true);
+		Resource resource = resourceSet.getResource(URI.createURI("../no.ntnu.tdt4250.examples/ExampleTestSuite.xmi"), true);
 		return (TestSuite) resource.getContents().get(0);
 	}
 	
