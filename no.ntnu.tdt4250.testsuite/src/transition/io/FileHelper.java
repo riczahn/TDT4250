@@ -19,9 +19,9 @@ public class FileHelper {
 	public static final String EXAMPLES_JSON_FOLDER = EXAMPLES_FOLDER + "json/";
 	public static final String EXAMPLES_JAVA_FOLDER = EXAMPLES_FOLDER + "java/";
 	public static final String EXAMPLE_TEST_SUITE_XMI_FILE = EXAMPLES_XMI_FOLDER + "ExampleTestSuite.xmi";
-	public static final String EXAMPLE_TEST_SUITE_JAVA_FILE = EXAMPLES_XMI_FOLDER + "ExampleTestSuiteJavaModel.xmi";
+	public static final String EXAMPLE_JAVA_MODEL_XMI_FILE = EXAMPLES_XMI_FOLDER + "ExampleTestSuiteJavaModel.xmi";
 	
-	public static TestSuite loadTestSuite() {
+	public TestSuite loadTestSuiteFromXmiFile(String filepath) {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		resourceSet.getPackageRegistry().put(TestsuitePackage.eNS_URI, TestsuitePackage.eINSTANCE);
 		
@@ -29,12 +29,12 @@ public class FileHelper {
 		.getExtensionToFactoryMap()
 		.put("xmi", new XMIResourceFactoryImpl());
 		
-		Resource resource = resourceSet.getResource(URI.createURI(EXAMPLE_TEST_SUITE_XMI_FILE), true);
+		Resource resource = resourceSet.getResource(URI.createURI(filepath), true);
 		return (TestSuite) resource.getContents().get(0);
 	}
 	
-	public static void saveTestClass(TestClass testClass) throws IOException {
-		Resource javaModelResource = new XMIResourceFactoryImpl().createResource(URI.createURI(EXAMPLE_TEST_SUITE_JAVA_FILE));
+	public void saveTestClassAsXmi(TestClass testClass, String filepath) throws IOException {
+		Resource javaModelResource = new XMIResourceFactoryImpl().createResource(URI.createURI(filepath));
 		javaModelResource.getContents().add(testClass);
 		javaModelResource.save(System.out, null);
 	}

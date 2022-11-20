@@ -10,6 +10,9 @@ import transition.io.FileHelper;
 
 public class TestSuiteConverter {
 	
+	private static final FileHelper fileHelper = new FileHelper();
+	private static final TestSuiteHandler testSuiteHandler = new TestSuiteHandler();
+	
 	public static void main(String[] args) throws IOException {
 		processXmiFile(FileHelper.EXAMPLE_TEST_SUITE_XMI_FILE);
 		
@@ -19,12 +22,10 @@ public class TestSuiteConverter {
 	}
 	
 	public static void processXmiFile(String filename) throws IOException {
-		TestSuite testSuite = FileHelper.loadTestSuite();
+		TestSuite testSuite = fileHelper.loadTestSuiteFromXmiFile(FileHelper.EXAMPLE_TEST_SUITE_XMI_FILE);
 		
-		// convert instance of TestSuite to instance of JavaModel
-		TestSuiteHandler testSuiteHandler = new TestSuiteHandler();
 		TestClass testClass = testSuiteHandler.convertTestSuiteToTestClass(testSuite);
 		
-		FileHelper.saveTestClass(testClass);
+		fileHelper.saveTestClassAsXmi(testClass, FileHelper.EXAMPLE_JAVA_MODEL_XMI_FILE);
 	}
 }
