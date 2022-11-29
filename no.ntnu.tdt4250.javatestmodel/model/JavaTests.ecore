@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="javatestmodel" nsURI="platform://plugin/no.ntnu.tdt4250.testsuite/JavaTests.ecore"
+    nsPrefix="JavaTests">
+  <eClassifiers xsi:type="ecore:EClass" name="TestClass">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="imports" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="package" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="#//Visibility"
+        defaultValueLiteral="PACKAGE_PRIVATE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testMethods" upperBound="-1"
+        eType="#//Method" containment="true" eOpposite="#//Method/testClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Method">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="#//Visibility"
+        defaultValueLiteral="PACKAGE_PRIVATE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="returnType" lowerBound="1"
+        eType="#//SimpleDatatype" defaultValueLiteral="VOID"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="annotations" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
+        eType="#//Statement" containment="true" eOpposite="#//Statement/method"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testClass" eType="#//TestClass"
+        eOpposite="#//TestClass/testMethods"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//Method"
+        eOpposite="#//Method/statements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LineStatement" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lineContent" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Visibility">
+    <eLiterals name="PACKAGE_PRIVATE"/>
+    <eLiterals name="PUBLIC" value="1"/>
+    <eLiterals name="PROTECTED" value="2"/>
+    <eLiterals name="PRIVATE" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SimpleDatatype">
+    <eLiterals name="VOID"/>
+    <eLiterals name="STRING" value="1"/>
+    <eLiterals name="LONG" value="2"/>
+    <eLiterals name="INT" value="3"/>
+    <eLiterals name="SHORT" value="4"/>
+    <eLiterals name="DOUBLE" value="5"/>
+    <eLiterals name="FLOAT" value="6"/>
+    <eLiterals name="BOOLEAN" value="7"/>
+  </eClassifiers>
+</ecore:EPackage>
