@@ -1,0 +1,78 @@
+[comment encoding = UTF-8 /]
+[module generateJavaCode('platform://plugin/no.ntnu.tdt4250.javatestmodel/JavaTest.ecore')]
+
+[template public generateJavaCode(testClass : TestClass)]
+[comment @main/]
+[file (testClass.name + '.java', false, 'UTF-8')]
+package [ generate(testClass.visibility) /] [ testClass._package /];
+
+[ generateImports(testClass.imports) /]
+
+class [ testClass.name /]  {
+	[ generateMethods(testClass.testMethods) /]
+}
+[/file]
+[/template]
+
+[template public generateImports(imports : Collection(String))]
+[for (imp : String | imports)] 
+[ imp /];
+[/for]
+[/template]
+
+[template public generateMethods(methods : Collection(Method))]
+[for (met : Method | methods)] 
+[ generateMethod(met) /]
+[/for]
+[/template]
+
+[template public generateMethod(method : Method)]
+[for (ann : String | method.annotations)]
+@[ ann /]
+[/for]
+[ generate(method.visibility) /] [ generate(method.returnType) /] [ method.name.replaceAll(' ', '') /] {
+[for (stat : Statement | method.statements)] 
+	[ generate(stat) /]
+[/for]
+}
+[/template]
+
+[template public generate(statement : Statement)]
+[ generate(statement) /]
+[/template]
+
+[template public generate(line : LineStatement)]
+[ line.lineContent.replaceAll(';', '') /][if (line.lineContent.replaceAll(' ', '').size() > 0)];[/if]
+[/template]
+
+[template public generate(visibility : Visibility)]
+[if (visibility.toString() = 'PACKAGE_PRIVATE')]
+private[/if]
+[if (visibility.toString() = 'PRIVATE')]
+private[/if]
+[if (visibility.toString() = 'PUBLIC')]
+public[/if]
+[if (visibility.toString() = 'PROTECTED')]
+protected[/if]
+[/template]
+
+[template public generate(dataType : SimpleDatatype)]
+[if (dataType.toString() = 'VOID')]
+void[/if]
+[if (dataType.toString() = 'STRING')]
+String[/if]
+[if (dataType.toString() = 'LONG')]
+Long[/if]
+[if (dataType.toString() = 'INT')]
+Integer[/if]
+[if (dataType.toString() = 'SHORT')]
+Short[/if]
+[if (dataType.toString() = 'DOUBLE')]
+Double[/if]
+[if (dataType.toString() = 'FLOAT')]
+Float[/if]
+[if (dataType.toString() = 'BOOLEAN')]
+boolean[/if]
+[/template]
+
+

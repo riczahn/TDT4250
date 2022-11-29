@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ASCII"?>
+<javatest:TestClass
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:javatest="platform://plugin/no.ntnu.tdt4250.javatestmodel/JavaTest.ecore"
+    name="TestClass"
+    package="packagename">
+  <imports>import org.apache.hc.client5.http.classic.HttpClient</imports>
+  <imports>import org.apache.hc.client5.http.classic.methods.HttpPost</imports>
+  <imports>import org.apache.hc.client5.http.impl.classic.HttpClients</imports>
+  <imports>import org.apache.hc.core5.http.io.entity.StringEntity</imports>
+  <imports>import org.junit.jupiter.api.BeforeEach</imports>
+  <imports>import org.junit.jupiter.api.Test</imports>
+  <imports>import java.io.IOException</imports>
+  <imports>import static org.assertj.core.api.Assertions.assertThat</imports>
+  <testMethods
+      name="Create and Get Teacher">
+    <annotations>Test</annotations>
+    <statements
+        xsi:type="javatest:LineStatement"
+        lineContent="HttpClient httpClient = HttpClients.createDefault();"/>
+    <statements
+        xsi:type="javatest:LineStatement"
+        lineContent="var httpRequest = new HttpPost(&quot;https://api.ntnu.no/teachers&quot;);"/>
+    <statements
+        xsi:type="javatest:LineStatement"
+        lineContent="String body = &quot;{&quot;name&quot;: &quot;Leonardo Montecchi&quot;}&quot;;"/>
+    <statements
+        xsi:type="javatest:LineStatement"
+        lineContent="var response = httpClient.execute(httpRequest);"/>
+    <statements
+        xsi:type="javatest:LineStatement"
+        lineContent="assertThat(response.getCode()).isIn(201);"/>
+    <statements
+        xsi:type="javatest:LineStatement"
+        lineContent=""/>
+    <statements
+        xsi:type="javatest:LineStatement"
+        lineContent="HttpClient httpClient = HttpClients.createDefault();"/>
+    <statements
+        xsi:type="javatest:LineStatement"
+        lineContent="var httpRequest = new HttpGet(&quot;https://api.ntnu.no/teachers/{teacherId}&quot;);"/>
+    <statements
+        xsi:type="javatest:LineStatement"
+        lineContent="var response = httpClient.execute(httpRequest);"/>
+    <statements
+        xsi:type="javatest:LineStatement"
+        lineContent="assertThat(response.getCode()).isIn(200);"/>
+    <statements
+        xsi:type="javatest:LineStatement"
+        lineContent=""/>
+  </testMethods>
+</javatest:TestClass>
