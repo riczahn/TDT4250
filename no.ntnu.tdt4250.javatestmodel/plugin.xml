@@ -11,7 +11,15 @@
       <package
             uri="platform://plugin/no.ntnu.tdt4250.testsuite/JavaTests.ecore"
             class="javatestmodel.JavaModelPackage"
-            genModel="model/JavaTests.genmodel"/>
+            genModel="model/JavaTest.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated JavaTest -->
+      <package
+            uri="platform://plugin/no.ntnu.tdt4250.javatestmodel/JavaTest.ecore"
+            class="javatest.JavaModelPackage"
+            genModel="model/JavaTest.genmodel"/>
    </extension>
 
 </plugin>
