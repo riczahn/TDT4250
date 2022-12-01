@@ -13,38 +13,43 @@ public class DependencyHandler {
 	
 	public void addDependency(String packageName) {
 		String importStatement = "import " + packageName;
-		imports.add(importStatement);	
+		if (!imports.contains(importStatement)) {
+			imports.add(importStatement);			
+		}
 	}
 	
 	public void addStaticDependency(String packageName) {
 		String importStatement = "import static " + packageName;
-		imports.add(importStatement);
+		if (!imports.contains(importStatement)) {
+			imports.add(importStatement);
+		}
 	}
 	
 	public List<String> getImportStatements() {
-		// TODO: Test this
 		// if we have 5 imports of the same package, then replace these 5 imports with one .* import
 		
 		// get the library names		
 		List<String> libs  = new ArrayList<>();
+		
 		for (int i = 0; i < imports.size(); ++i) {
-			int ii = imports[i].lastIndexOf('.'); 
-			String[] a =  {imports[i].substring(0, ii), imports[i].substring(ii+1)};
-			libs.add(a);
-		}		
+			int ii = imports.get(i).lastIndexOf('.'); 
+			String[] a =  {imports.get(i).substring(0, ii), imports.get(i).substring(ii+1)};
+			libs.add(a[0]);
+		}
 		
 		for (int i = 0; i < libs.size(); ++i) {
-			int occurences = Collections.frequency(libs, libs[i])
+			String current = libs.get(i);
+			int occurences = Collections.frequency(libs, current);
 			// check which library name occurs more than 4 times
 			if (occurences >= 5) {
 				// remove the packages from imports
-				imports.removeIf(s -> (s.contains(libs[i]))));
-				
+				imports.removeIf(s -> (s.contains(current)));
+			
 				// add the alternate notation to imports
-				imports.add(libs[i] + ".*");
+				imports.add(current + ".*");
 				
 				// remove all libs with equal names
-				libs.removeIf(s -> (s.equalsIgnoreCase(libs[i])));
+				libs.removeIf(s -> (s.equalsIgnoreCase(current)));
 			}
 		}
 		
