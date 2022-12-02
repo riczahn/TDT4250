@@ -11,13 +11,17 @@ import testsuite.TestStep;
 public class TestCaseHandler {
 	
 	private final TestStepHandler testStepHandler;
+	public final DependencyHandler dependencyHandler;
 	
 	public TestCaseHandler() {
-		this(new TestStepHandler());
+		this(new TestStepHandler(), new DependencyHandler());
+		System.out.println("TestCaseHandler()");
+		
 	}
 	
-	public TestCaseHandler(TestStepHandler testStepHandler) {
+	public TestCaseHandler(TestStepHandler testStepHandler, DependencyHandler dependencyHandler) {
 		this.testStepHandler = testStepHandler;
+		this.dependencyHandler = dependencyHandler;
 	}
 	
 	public Method convertTestCaseToMethod(TestCase testCase) {
@@ -37,7 +41,9 @@ public class TestCaseHandler {
 		}
 		
 		// TODO: Here are annotations missing. Each method needs the @Test annotation
+		
 		// don't forget to add the import 'org.junit.jupiter.api.Test'
+		dependencyHandler.addDependency("org.junit.jupiter.api.Test");
 		
 		return testMethod;
 	}

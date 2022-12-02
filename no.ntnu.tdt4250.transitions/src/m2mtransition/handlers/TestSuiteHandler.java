@@ -10,6 +10,7 @@ public class TestSuiteHandler {
 	
 	private final TestCaseHandler testCaseHandler;
 	
+	
 	public TestSuiteHandler() {
 		this(new TestCaseHandler());
 	}
@@ -27,7 +28,7 @@ public class TestSuiteHandler {
 			testClass.getTestMethods().add(testMethod);
 		}
 		
-		// TODO: Here are the import statements missing. See DependencyHandler
+		testClass.getImports().addAll(testCaseHandler.dependencyHandler.getImportStatements());
 		
 		return testClass;
 	}

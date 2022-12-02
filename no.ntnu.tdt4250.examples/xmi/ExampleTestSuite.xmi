@@ -16,4 +16,20 @@
       <headers key="Accept" value="application/json"/>
     </testSteps>
   </testCases>
+    <testCases name="Create and Get Teacher Again">
+    <testSteps xsi:type="APIRequest" uri="https://api.ntnu.no/teachers" method="POST" body="{&quot;name&quot;: &quot;Leonardo Montecchi&quot;}">
+      <assertions xsi:type="StatusAssertion" errorMessage="&quot;Statuscode is not 201&quot;">
+        <successfulCodes>201</successfulCodes>
+      </assertions>
+      <headers key="Content-Type" value="application/json"/>
+      <headers key="Accept" value="application/json"/>
+    </testSteps>
+    <testSteps xsi:type="APIRequest" id="1" uri="https://api.ntnu.no/teachers/{teacherId}">
+      <parameters name="teacherId" jsonPath="$.id"/>
+      <assertions xsi:type="StatusAssertion" errorMessage="&quot;Statuscode is not 200&quot;">
+        <successfulCodes>200</successfulCodes>
+      </assertions>
+      <headers key="Accept" value="application/json"/>
+    </testSteps>
+  </testCases>
 </TestSuite>
