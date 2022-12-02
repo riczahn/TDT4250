@@ -1,37 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateJavaCode" name="no.ntnu.tdt4250.transitions">
-    <property name="ECLIPSE_HOME" value="../../../../../../../Downloads/eclipse-dsl-2022-06-R-win32-x86_64/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../tdt4250"/>
+    <property name="ECLIPSE_HOME" value="../../../../../../../Program Files (x86)/Eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="no.ntnu.tdt4250.transitions.libraryclasspath">
         <pathelement location="${ECLIPSE_WORKSPACE}/no.ntnu.tdt4250.transitions/bin"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.3.v20220515-1416/jre/lib/jrt-fs.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.annotation.versioning_1.1.2.202109301733.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.annotation.bundle_2.0.0.202202082230.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.service.component.annotations_1.5.0.202109301733.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime_3.26.0.v20220813-0916.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.18.100.v20220817-1601.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi.compatibility.state_1.2.700.v20220722-0431.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.common_3.16.200.v20220817-1601.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.jobs_3.13.100.v20220817-1539.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.registry_3.11.200.v20220817-1601.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.preferences_3.10.100.v20220710-1223.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime_3.25.0.v20220506-1157.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.18.0.v20220516-2155.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi.compatibility.state_1.2.600.v20220207-1403.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.common_3.16.100.v20220315-2327.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.jobs_3.13.0.v20220512-1935.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.registry_3.11.100.v20211021-1418.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.preferences_3.10.0.v20220503-1634.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.service.prefs_1.1.2.202109301733.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.contenttype_3.8.200.v20220817-1539.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.app_1.6.200.v20220720-2012.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore_2.28.0.v20220817-1401.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.common_2.26.0.v20220817-1401.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore.xmi_2.17.0.v20220817-1334.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl_3.17.0.v20220309-0840.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/lpg.runtime.java_2.0.17.v201004271640.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl.common_1.17.0.v20220309-0840.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.ocl.ecore_3.17.0.v20220309-0840.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.common_3.7.11.202102190929.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.model_3.7.11.202102190929.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.profiler_3.7.11.202102190929.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.acceleo.engine_3.7.11.202102190929.jar"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen.ecore_2.31.0.v20220730-0849.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.contenttype_3.8.100.v20210910-0640.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.equinox.app_1.6.100.v20211021-1418.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore_2.27.0.v20220426-0617.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.common_2.25.0.v20220325-0806.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore.xmi_2.16.0.v20190528-0725.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen.ecore_2.30.0.v20220426-0617.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen_2.22.0.v20210420-0623.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_30.1.0.v20210127-2300.jar"/>
     </path>

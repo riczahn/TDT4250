@@ -3,6 +3,7 @@ package m2mtransition.handlers;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.Set;
 
 import javatest.LineStatement;
 import javatest.Statement;
@@ -198,10 +199,7 @@ public class TestStepHandler {
 		
 	}
 	
-	public List<String> getNecessaryImports() {
-		// TODO: This method is not used yet. Connect it to the rest
-		// Also remember that at some point we might need to merge the import statements generated for multiple methods
-		// that means that an import could be there twice. Either add merge logic or convert it to a Set (no duplicates allowed)
+	public Set<String> getNecessaryImports() {
 		return dependencyHandler.getImportStatements();
 	}
 
