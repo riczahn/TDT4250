@@ -42,7 +42,7 @@ class [ testClass.name /]  {
 [/template]
 
 [template public generate(line : LineStatement)]
-[ line.lineContent.replaceAll(';', '') /][if (line.lineContent.replaceAll(' ', '').size() > 0)];[/if]
+[ line.lineContent /]
 [/template]
 
 [template public generate(visibility : Visibility)]
