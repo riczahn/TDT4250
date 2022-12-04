@@ -28,7 +28,7 @@ class [ testClass.name /]  {
 
 [template public generateMethod(method : Method)]
 [for (ann : String | method.annotations)]
-@[ ann /]
+[ ann /]
 [/for]
 [ generate(method.visibility) /] [ generate(method.returnType) /] [ method.name.replaceAll(' ', '') /] {
 [for (stat : Statement | method.statements)] 
