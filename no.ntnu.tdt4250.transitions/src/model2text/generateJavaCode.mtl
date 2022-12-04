@@ -4,11 +4,13 @@
 [template public generateJavaCode(testClass : TestClass)]
 [comment @main/]
 [file (testClass.name + '.java', false, 'UTF-8')]
-package [ generate(testClass.visibility) /] [ testClass._package /];
+[if testClass._package->notEmpty()]
+package [ testClass._package /];
+[/if]
 
 [ generateImports(testClass.imports) /]
 
-class [ testClass.name /]  {
+[ generate(testClass.visibility) /] class [ testClass.name /]  {
 	[ generateMethods(testClass.testMethods) /]
 }
 [/file]
@@ -28,9 +30,9 @@ class [ testClass.name /]  {
 
 [template public generateMethod(method : Method)]
 [for (ann : String | method.annotations)]
-@[ ann /]
+[ ann /]
 [/for]
-[ generate(method.visibility) /] [ generate(method.returnType) /] [ method.name.replaceAll(' ', '') /] {
+[ generate(method.visibility) /] [ generate(method.returnType) /] [ method.name.replaceAll(' ', '') /]() {
 [for (stat : Statement | method.statements)] 
 	[ generate(stat) /]
 [/for]
@@ -42,12 +44,12 @@ class [ testClass.name /]  {
 [/template]
 
 [template public generate(line : LineStatement)]
-[ line.lineContent.replaceAll(';', '') /][if (line.lineContent.replaceAll(' ', '').size() > 0)];[/if]
+[ line.lineContent /]
 [/template]
 
 [template public generate(visibility : Visibility)]
 [if (visibility.toString() = 'PACKAGE_PRIVATE')]
-private[/if]
+[/if]
 [if (visibility.toString() = 'PRIVATE')]
 private[/if]
 [if (visibility.toString() = 'PUBLIC')]

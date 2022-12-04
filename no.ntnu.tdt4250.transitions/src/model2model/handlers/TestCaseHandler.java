@@ -15,8 +15,6 @@ public class TestCaseHandler {
 	
 	public TestCaseHandler() {
 		this(new TestStepHandler(), new DependencyHandler());
-		System.out.println("TestCaseHandler()");
-		
 	}
 	
 	public TestCaseHandler(TestStepHandler testStepHandler, DependencyHandler dependencyHandler) {

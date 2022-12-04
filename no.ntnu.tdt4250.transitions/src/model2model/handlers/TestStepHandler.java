@@ -15,8 +15,8 @@ public class TestStepHandler {
 		this(new DependencyHandler());
 	}
 	
-	public TestStepHandler(DependencyHandler importHandler) {
-		this.dependencyHandler = importHandler;
+	public TestStepHandler(DependencyHandler dependencyHandler) {
+		this.dependencyHandler = dependencyHandler;
 	}
 	
 	public List<Statement> convertTestStepToStatements(TestStep testStep) {
@@ -29,12 +29,10 @@ public class TestStepHandler {
 	
 	private List<Statement> convertApiRequestToStatements(APIRequest testStep) {
 		ApiRequestHandler apiRequestHandler = ApiRequestHandler.getResponsibleApiRequestHandler(testStep.getMethod(), dependencyHandler);
-		
 		return apiRequestHandler.convertRequestToStatements(testStep);
 	}
 
 	public Set<String> getNecessaryImports() {
 		return dependencyHandler.getImportStatements();
 	}
-
 }

@@ -1,5 +1,6 @@
 package model2model.handlers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javatest.LineStatement;
@@ -15,10 +16,11 @@ public class DeleteApiRequestHandler extends ApiRequestHandler {
 
 	@Override
 	public List<Statement> convertRequestToStatements(APIRequest apiRequest) {
-		List<Statement> statements = addStatementsForHttpClient(apiRequest);
-		statements.addAll(addHeaders(apiRequest.getHeaders()));
+		List<Statement> statements = new ArrayList<>();
+		statements.add(addRequestStatementAndDependency(apiRequest));
+		statements.addAll(addHeaders(apiRequest));
 		
-		statements.add(addRequestExecutionStatement());
+		statements.add(addRequestExecutionStatement(apiRequest));
 		
 		statements.addAll(addAssertionStatements(apiRequest));
 		
@@ -28,7 +30,7 @@ public class DeleteApiRequestHandler extends ApiRequestHandler {
 	@Override
 	public Statement addRequestStatementAndDependency(APIRequest apiRequest) {
 		LineStatement createHttpRequestStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
-		String createHttpRequest = "var httpRequest = new HttpDelete(\"" + apiRequest.getUri() + "\");";
+		String createHttpRequest = "var httpRequest" + apiRequest.getId() + " = new HttpDelete(\"" + apiRequest.getUri() + "\");";
 		
 		createHttpRequestStatement.setLineContent(createHttpRequest);
 		dependencyHandler.addDependency("org.apache.hc.client5.http.classic.methods.HttpDelete");
