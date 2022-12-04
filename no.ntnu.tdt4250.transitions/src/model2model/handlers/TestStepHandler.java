@@ -15,8 +15,8 @@ public class TestStepHandler {
 		this(new DependencyHandler());
 	}
 	
-	public TestStepHandler(DependencyHandler importHandler) {
-		this.dependencyHandler = importHandler;
+	public TestStepHandler(DependencyHandler dependencyHandler) {
+		this.dependencyHandler = dependencyHandler;
 	}
 	
 	public List<Statement> convertTestStepToStatements(TestStep testStep) {
@@ -35,5 +35,4 @@ public class TestStepHandler {
 	public Set<String> getNecessaryImports() {
 		return dependencyHandler.getImportStatements();
 	}
-
 }
