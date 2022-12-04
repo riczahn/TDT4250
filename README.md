@@ -8,8 +8,7 @@
 * Model-to-Model-Transition
 	* It is possible that the code lines we are "generating" are invalid due to multiple variables having the same name. We need a fix for this
 * Model-to-Text transition
-	* Is it working? I have no idea so far :D
-	* How do we handle different levels of indentation?
+	* How could we trigger this workflow from java code e.g. inside the TestSuiteConverter class?
 * Sirius
 	* Is it working?
 * Constraints
