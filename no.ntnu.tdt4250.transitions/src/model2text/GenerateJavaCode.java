@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package java2codetransition;
+package model2text;
 
 import java.io.File;
 import java.io.IOException;
@@ -38,7 +38,7 @@ public class GenerateJavaCode extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/java2codetransition/generateJavaCode";
+    public static final String MODULE_FILE_NAME = "/model2text/generateJavaCode";
     
     /**
      * The name of the templates that are to be generated.

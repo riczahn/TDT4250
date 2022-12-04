@@ -1,4 +1,4 @@
-package m2mtransition.io;
+package model2model.io;
 
 import java.io.IOException;
 

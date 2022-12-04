@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package java2codetransition;
+package model2text;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;

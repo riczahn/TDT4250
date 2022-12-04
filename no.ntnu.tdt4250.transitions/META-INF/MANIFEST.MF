@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Acceleo Transitions Module Runtime Plug-in
 Bundle-SymbolicName: no.ntnu.tdt4250.transitions
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: java2codetransition.Activator
+Bundle-Activator: model2text.Activator
 Bundle-Vendor: Eclipse Modeling Project
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore,

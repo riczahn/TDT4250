@@ -1,4 +1,4 @@
-package m2mtransition.handlers;
+package model2model.handlers;
 
 import java.util.ArrayList;
 import java.util.Collections;

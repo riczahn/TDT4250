@@ -1,9 +1,9 @@
-package m2mtransition;
+package model2model;
 
 import java.io.IOException;
 import javatest.TestClass;
-import m2mtransition.handlers.TestSuiteHandler;
-import m2mtransition.io.FileHelper;
+import model2model.handlers.TestSuiteHandler;
+import model2model.io.FileHelper;
 import testsuite.TestSuite;
 
 

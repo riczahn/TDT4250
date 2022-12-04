@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateJavaCode" name="no.ntnu.tdt4250.transitions">
     <property name="ECLIPSE_HOME" value="../../../../../../../Program Files (x86)/Eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../.."/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../runtime-EclipseApplication"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="no.ntnu.tdt4250.transitions.libraryclasspath">
@@ -41,7 +41,7 @@
 
     <!-- The default task with the jars used by this project -->
     <target name="generateJavaCode">
-        <java classname="java2codetransition.GenerateJavaCode" classpathref="no.ntnu.tdt4250.transitions.classpath">
+        <java classname="model2text.GenerateJavaCode" classpathref="no.ntnu.tdt4250.transitions.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>
@@ -52,7 +52,7 @@
         Keep in mind that having two versions of the same jar can create problems
     -->
     <target name="generateJavaCode.alljars">
-        <java classname="java2codetransition.GenerateJavaCode" classpathref="no.ntnu.tdt4250.transitions.classpath">
+        <java classname="model2text.GenerateJavaCode" classpathref="no.ntnu.tdt4250.transitions.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>
