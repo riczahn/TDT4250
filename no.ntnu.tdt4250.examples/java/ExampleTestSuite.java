@@ -1,11 +1,10 @@
-package private ;
 
 import org.junit.jupiter.api.Test;
 
 
-class ExampleTestSuite  {
+ class ExampleTestSuite  {
 	@Test
-	private void CreateandGetTeacher {
+	 void CreateandGetTeacher() {
 		var httpRequest0 = new HttpPost("https://api.ntnu.no/teachers");
 		httpRequest0.setHeader("Content-Type", "application/json");
 		httpRequest0.setHeader("Accept", "application/json");
@@ -23,7 +22,7 @@ class ExampleTestSuite  {
 		
 	}
 	@Test
-	private void CreateandGetTeacherAgain {
+	 void CreateandGetTeacherAgain() {
 		var httpRequest0 = new HttpPost("https://api.ntnu.no/teachers");
 		httpRequest0.setHeader("Content-Type", "application/json");
 		httpRequest0.setHeader("Accept", "application/json");

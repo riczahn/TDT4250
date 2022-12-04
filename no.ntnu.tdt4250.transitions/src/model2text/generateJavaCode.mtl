@@ -4,11 +4,13 @@
 [template public generateJavaCode(testClass : TestClass)]
 [comment @main/]
 [file (testClass.name + '.java', false, 'UTF-8')]
-package [ generate(testClass.visibility) /] [ testClass._package /];
+[if testClass._package->notEmpty()]
+package [ testClass._package /];
+[/if]
 
 [ generateImports(testClass.imports) /]
 
-class [ testClass.name /]  {
+[ generate(testClass.visibility) /] class [ testClass.name /]  {
 	[ generateMethods(testClass.testMethods) /]
 }
 [/file]
@@ -30,7 +32,7 @@ class [ testClass.name /]  {
 [for (ann : String | method.annotations)]
 [ ann /]
 [/for]
-[ generate(method.visibility) /] [ generate(method.returnType) /] [ method.name.replaceAll(' ', '') /] {
+[ generate(method.visibility) /] [ generate(method.returnType) /] [ method.name.replaceAll(' ', '') /]() {
 [for (stat : Statement | method.statements)] 
 	[ generate(stat) /]
 [/for]
@@ -47,7 +49,7 @@ class [ testClass.name /]  {
 
 [template public generate(visibility : Visibility)]
 [if (visibility.toString() = 'PACKAGE_PRIVATE')]
-private[/if]
+[/if]
 [if (visibility.toString() = 'PRIVATE')]
 private[/if]
 [if (visibility.toString() = 'PUBLIC')]

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateJavaCode" name="no.ntnu.tdt4250.transitions">
     <property name="ECLIPSE_HOME" value="../../../../../../../Program Files (x86)/Eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../.."/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../runtime-EclipseApplication"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="no.ntnu.tdt4250.transitions.libraryclasspath">
