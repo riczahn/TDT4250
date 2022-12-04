@@ -150,9 +150,12 @@ public class TestStepHandler {
 	private List<Statement> addHeaders(List<Header> headers) {
 		List<Statement> statements = new ArrayList<>();
 		
-		// TODO: Add headers
-		// Always Accept: application/json
-		// If we send data, then also Content-Type: application/json
+		for (Header header : headers) {
+			LineStatement addHeaderStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
+			String addHeader = "httpRequest.setHeader(\"" +  header.getKey() + "\", \"" + header.getValue() + "\"";
+			addHeaderStatement.setLineContent(addHeader);
+			statements.add(addHeaderStatement);
+		}
 		
 		return statements;
 	}
