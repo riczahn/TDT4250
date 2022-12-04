@@ -31,26 +31,13 @@ public abstract class ApiRequestHandler {
 	
 	public abstract Statement addRequestStatementAndDependency(APIRequest apiRequest);
 	
-	protected List<Statement> addStatementsForHttpClient(APIRequest apiRequest) {
-		List<Statement> statements = new ArrayList<>();
-		
-		// TODO: Move HttpClient creation into before method
-		LineStatement createHttpClientStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
-		String createHttpClient = "HttpClient httpClient = HttpClients.createDefault();";
-		createHttpClientStatement.setLineContent(createHttpClient);
-		statements.add(createHttpClientStatement);
+	protected Statement addRequestExecutionStatement(APIRequest apiRequest) {
+		LineStatement executeRequestStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
+		String executeRequest = "var response" + apiRequest.getId() + " = HttpClients.createDefault().execute(httpRequest);";
+		executeRequestStatement.setLineContent(executeRequest);
 		
 		dependencyHandler.addDependency("org.apache.hc.client5.http.classic.HttpClient");
 		
-		statements.add(addRequestStatementAndDependency(apiRequest));
-		
-		return statements;
-	}
-	
-	protected Statement addRequestExecutionStatement(APIRequest apiRequest) {
-		LineStatement executeRequestStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
-		String executeRequest = "var response" + apiRequest.getId() + " = httpClient.execute(httpRequest);";
-		executeRequestStatement.setLineContent(executeRequest);
 		return executeRequestStatement;
 	}
 	
@@ -59,7 +46,7 @@ public abstract class ApiRequestHandler {
 		
 		for (Header header : apiRequest.getHeaders()) {
 			LineStatement addHeaderStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
-			String addHeader = "httpRequest" + apiRequest.getId() + ".setHeader(\"" +  header.getKey() + "\", \"" + header.getValue() + "\"";
+			String addHeader = "httpRequest" + apiRequest.getId() + ".setHeader(\"" +  header.getKey() + "\", \"" + header.getValue() + "\");";
 			addHeaderStatement.setLineContent(addHeader);
 			statements.add(addHeaderStatement);
 		}

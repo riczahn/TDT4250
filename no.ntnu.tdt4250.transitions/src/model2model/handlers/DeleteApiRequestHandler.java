@@ -1,5 +1,6 @@
 package model2model.handlers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javatest.LineStatement;
@@ -15,7 +16,8 @@ public class DeleteApiRequestHandler extends ApiRequestHandler {
 
 	@Override
 	public List<Statement> convertRequestToStatements(APIRequest apiRequest) {
-		List<Statement> statements = addStatementsForHttpClient(apiRequest);
+		List<Statement> statements = new ArrayList<>();
+		statements.add(addRequestStatementAndDependency(apiRequest));
 		statements.addAll(addHeaders(apiRequest));
 		
 		statements.add(addRequestExecutionStatement(apiRequest));
