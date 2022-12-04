@@ -66,7 +66,10 @@ public class TestStepHandler {
 		setBodyStatement.setLineContent(body);
 		statements.add(setBodyStatement);
 		
-		// TODO: The body needs to be wrapped into a StringEntity and added to the Request
+		LineStatement setRequestEntityStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
+		String setRequestEntity = "httpRequest.setEntity(new StringEntity(body));";
+		setRequestEntityStatement.setLineContent(setRequestEntity);
+		statements.add(setRequestEntityStatement);
 		
 		statements.addAll(addHeaders(testStep.getHeaders()));
 		
