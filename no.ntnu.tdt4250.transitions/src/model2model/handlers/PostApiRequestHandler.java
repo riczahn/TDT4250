@@ -18,18 +18,18 @@ public class PostApiRequestHandler extends ApiRequestHandler {
 		List<Statement> statements = addStatementsForHttpClient(apiRequest);
 		
 		LineStatement setBodyStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
-		String body = "String body = \"" + apiRequest.getBody() + "\";";
+		String body = "String body" + apiRequest.getId() + " = \"" + apiRequest.getBody() + "\";";
 		setBodyStatement.setLineContent(body);
 		statements.add(setBodyStatement);
 		
 		LineStatement setRequestEntityStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
-		String setRequestEntity = "httpRequest.setEntity(new StringEntity(body));";
+		String setRequestEntity = "httpRequest" + apiRequest.getId() + ".setEntity(new StringEntity(body));";
 		setRequestEntityStatement.setLineContent(setRequestEntity);
 		statements.add(setRequestEntityStatement);
 		
-		statements.addAll(addHeaders(apiRequest.getHeaders()));
+		statements.addAll(addHeaders(apiRequest));
 		
-		statements.add(addRequestExecutionStatement());
+		statements.add(addRequestExecutionStatement(apiRequest));
 		
 		statements.addAll(addAssertionStatements(apiRequest));
 		
@@ -39,7 +39,7 @@ public class PostApiRequestHandler extends ApiRequestHandler {
 	@Override
 	public Statement addRequestStatementAndDependency(APIRequest apiRequest) {
 		LineStatement createHttpRequestStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
-		String createHttpRequest = "var httpRequest = new HttpPost(\"" + apiRequest.getUri() + "\");";
+		String createHttpRequest = "var httpRequest" + apiRequest.getId() + " = new HttpPost(\"" + apiRequest.getUri() + "\");";
 		
 		createHttpRequestStatement.setLineContent(createHttpRequest);
 		dependencyHandler.addDependency("org.apache.hc.client5.http.classic.methods.HttpPost");

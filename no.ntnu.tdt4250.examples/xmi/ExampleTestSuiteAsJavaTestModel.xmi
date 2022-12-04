@@ -4,37 +4,37 @@
   <testMethods name="Create and Get Teacher">
     <annotations>@Test</annotations>
     <statements xsi:type="javatest:LineStatement" lineContent="HttpClient httpClient = HttpClients.createDefault();"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="var httpRequest = new HttpPost(&quot;https://api.ntnu.no/teachers&quot;);"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="String body = &quot;{&quot;name&quot;: &quot;Leonardo Montecchi&quot;}&quot;;"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest.setEntity(new StringEntity(body));"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest.setHeader(&quot;Content-Type&quot;, &quot;application/json&quot;"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest.setHeader(&quot;Accept&quot;, &quot;application/json&quot;"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="var response = httpClient.execute(httpRequest);"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="assertThat(response.getCode()).isIn(201);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="var httpRequest0 = new HttpPost(&quot;https://api.ntnu.no/teachers&quot;);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="String body0 = &quot;{&quot;name&quot;: &quot;Leonardo Montecchi&quot;}&quot;;"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setEntity(new StringEntity(body));"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setHeader(&quot;Content-Type&quot;, &quot;application/json&quot;"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setHeader(&quot;Accept&quot;, &quot;application/json&quot;"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="var response0 = httpClient.execute(httpRequest);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="assertThat(response0.getCode()).isIn(201);"/>
     <statements xsi:type="javatest:LineStatement" lineContent="&#xA;"/>
     <statements xsi:type="javatest:LineStatement" lineContent="HttpClient httpClient = HttpClients.createDefault();"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="var httpRequest = new HttpGet(&quot;https://api.ntnu.no/teachers/{teacherId}&quot;);"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest.setHeader(&quot;Accept&quot;, &quot;application/json&quot;"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="var response = httpClient.execute(httpRequest);"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="assertThat(response.getCode()).isIn(200);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="var httpRequest1 = new HttpGet(&quot;https://api.ntnu.no/teachers/{teacherId}&quot;);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest1.setHeader(&quot;Accept&quot;, &quot;application/json&quot;"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="var response1 = httpClient.execute(httpRequest);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="assertThat(response1.getCode()).isIn(200);"/>
     <statements xsi:type="javatest:LineStatement" lineContent="&#xA;"/>
   </testMethods>
   <testMethods name="Create and Get Teacher Again">
     <annotations>@Test</annotations>
     <statements xsi:type="javatest:LineStatement" lineContent="HttpClient httpClient = HttpClients.createDefault();"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="var httpRequest = new HttpPost(&quot;https://api.ntnu.no/teachers&quot;);"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="String body = &quot;{&quot;name&quot;: &quot;Leonardo Montecchi&quot;}&quot;;"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest.setEntity(new StringEntity(body));"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest.setHeader(&quot;Content-Type&quot;, &quot;application/json&quot;"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest.setHeader(&quot;Accept&quot;, &quot;application/json&quot;"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="var response = httpClient.execute(httpRequest);"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="assertThat(response.getCode()).isIn(201);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="var httpRequest0 = new HttpPost(&quot;https://api.ntnu.no/teachers&quot;);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="String body0 = &quot;{&quot;name&quot;: &quot;Leonardo Montecchi&quot;}&quot;;"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setEntity(new StringEntity(body));"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setHeader(&quot;Content-Type&quot;, &quot;application/json&quot;"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setHeader(&quot;Accept&quot;, &quot;application/json&quot;"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="var response0 = httpClient.execute(httpRequest);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="assertThat(response0.getCode()).isIn(201);"/>
     <statements xsi:type="javatest:LineStatement" lineContent="&#xA;"/>
     <statements xsi:type="javatest:LineStatement" lineContent="HttpClient httpClient = HttpClients.createDefault();"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="var httpRequest = new HttpGet(&quot;https://api.ntnu.no/teachers/{teacherId}&quot;);"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest.setHeader(&quot;Accept&quot;, &quot;application/json&quot;"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="var response = httpClient.execute(httpRequest);"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="assertThat(response.getCode()).isIn(200);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="var httpRequest1 = new HttpGet(&quot;https://api.ntnu.no/teachers/{teacherId}&quot;);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="httpRequest1.setHeader(&quot;Accept&quot;, &quot;application/json&quot;"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="var response1 = httpClient.execute(httpRequest);"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="assertThat(response1.getCode()).isIn(200);"/>
     <statements xsi:type="javatest:LineStatement" lineContent="&#xA;"/>
   </testMethods>
 </javatest:TestClass>
