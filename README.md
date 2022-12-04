@@ -1,5 +1,21 @@
 # TDT4250-Group02
 
+## OPEN TO-DOs
+* README
+	* Fix links to model section
+	* Describe the models in Model section
+	* Extend Usage section by explaining how to run the transitions
+* Model-to-Model-Transition
+	* It is possible that the code lines we are "generating" are invalid due to multiple variables having the same name. We need a fix for this
+* Model-to-Text transition
+	* Is it working? I have no idea so far :D
+	* How do we handle different levels of indentation?
+* Sirius
+	* Is it working?
+* Constraints
+	* Do we need to introduce some OCL constraints?
+
+
 ## Description
 This repository contains an eclipse plugin which can automatically generate test code for a web API. The test cases are specified as a sequence of REST requests, containing all the necessary information to execute the given HTTP requests, including parameters, headers and expected response codes. Further information on the data structures can be seen in the [Models section](#Models).
 
