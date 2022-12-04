@@ -36,6 +36,20 @@ public class FileHelper {
 	public void saveTestClassAsXmi(TestClass testClass, String filepath) throws IOException {
 		Resource javaModelResource = new XMIResourceFactoryImpl().createResource(URI.createURI(filepath));
 		javaModelResource.getContents().add(testClass);
-		javaModelResource.save(System.out, null);
+		javaModelResource.save(null);
+	}
+	
+	public String addBeforeFileExtension(String originalFilename, String x) {
+		int indexOfFileExtensionBegin = originalFilename.lastIndexOf('.');
+		String filenameWithoutExtension = originalFilename.substring(0, indexOfFileExtensionBegin);
+		String extension = originalFilename.substring(indexOfFileExtensionBegin);
+		return filenameWithoutExtension + x + extension;
+	}
+	
+	public String replaceFileExtension(String originalFilename, String desiredFileExtension) {
+		int indexOfFileExtensionBegin = originalFilename.lastIndexOf('.');
+		String filename = originalFilename.substring(0, indexOfFileExtensionBegin);
+		
+		return filename + desiredFileExtension;
 	}
 }

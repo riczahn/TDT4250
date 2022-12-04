@@ -29,7 +29,6 @@ public class TestStepHandler {
 	
 	private List<Statement> convertApiRequestToStatements(APIRequest testStep) {
 		ApiRequestHandler apiRequestHandler = ApiRequestHandler.getResponsibleApiRequestHandler(testStep.getMethod(), dependencyHandler);
-		
 		return apiRequestHandler.convertRequestToStatements(testStep);
 	}
 
