@@ -7,8 +7,11 @@
 	* Extend Usage section by explaining how to run the transitions
 * Model-to-Model-Transition
 	* It is possible that the code lines we are "generating" are invalid due to multiple variables having the same name. We need a fix for this
+	* Imports are missing!
+	* When generating the request body, the " are not being escaped properly and are therefore not present! -> Can't compile the resulting java class
 * Model-to-Text transition
 	* How could we trigger this workflow from java code e.g. inside the TestSuiteConverter class?
+	* Why are we generating so many empty lines?
 * Sirius
 	* Is it working?
 * Constraints
