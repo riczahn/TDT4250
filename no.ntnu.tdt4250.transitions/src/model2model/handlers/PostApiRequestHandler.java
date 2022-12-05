@@ -58,7 +58,6 @@ public class PostApiRequestHandler extends ApiRequestHandler {
 		String requestBody = apiRequest.getBody();
 		requestBody = escapeQuotes(requestBody);
 		String body = "String body" + apiRequest.getId() + " = \"" + requestBody + "\";";
-		System.out.println(body);
 		setBodyStatement.setLineContent(body);
 		statements.add(setBodyStatement);
 		
