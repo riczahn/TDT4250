@@ -43,10 +43,7 @@ public class PostApiRequestHandler extends ApiRequestHandler {
 		List<Statement> statements = new ArrayList<>();
 		
 		LineStatement setBodyStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
-		// TODO: Escaping of " does not work for whatever reason...
-		String requestBody = apiRequest.getBody();
 		
-		//String body = "String body" + apiRequest.getId() + " = \"" + apiRequest.getBody() + "\";";
 		String body = "String body" + apiRequest.getId() + " = '" + apiRequest.getBody() + "';";
 		setBodyStatement.setLineContent(body);
 		statements.add(setBodyStatement);
