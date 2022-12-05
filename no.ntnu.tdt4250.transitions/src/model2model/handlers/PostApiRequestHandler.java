@@ -39,12 +39,25 @@ public class PostApiRequestHandler extends ApiRequestHandler {
 		return createHttpRequestStatement;
 	}
 	
+	private String escapeQuotes(String str) {
+		String result = str;
+		int inserts = 0;
+		for (int i = 0; i < str.length(); ++i) {
+			if (str.charAt(i) == '"') {
+				result = new StringBuilder(result).insert(i+inserts, '\\').toString();
+				++inserts;
+			}
+		}
+		return result;
+	}
+	
 	private List<Statement> addBodyToRequest(APIRequest apiRequest) {
 		List<Statement> statements = new ArrayList<>();
 		
 		LineStatement setBodyStatement = JavaModelFactoryImpl.eINSTANCE.createLineStatement();
-		// TODO: Escaping of " does not work for whatever reason...
-		String body = "String body" + apiRequest.getId() + " = \"" + apiRequest.getBody() + "\";";
+		String requestBody = apiRequest.getBody();
+		requestBody = escapeQuotes(requestBody);
+		String body = "String body" + apiRequest.getId() + " = \"" + requestBody + "\";";
 		setBodyStatement.setLineContent(body);
 		statements.add(setBodyStatement);
 		
