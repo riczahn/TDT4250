@@ -5,11 +5,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:javatest="platform://plugin/no.ntnu.tdt4250.javatestmodel/JavaTest.ecore"
     name="TestClass"
-    package="packagename">
+    package="org.example._int">
   <imports>import org.apache.hc.client5.http.classic.HttpClient</imports>
   <imports>import org.apache.hc.client5.http.classic.methods.HttpPost</imports>
   <testMethods
-      name="Create and Get Teacher">
+      name="CreateAndGetTeacher">
     <statements
         xsi:type="javatest:LineStatement"
         lineContent="HttpClient httpClient = HttpClients.createDefault();"/>

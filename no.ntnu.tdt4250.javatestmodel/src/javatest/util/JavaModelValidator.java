@@ -164,18 +164,6 @@ public class JavaModelValidator extends EObjectValidator {
 	
 		return true;
 	}
-	
-	/**
-	 * Checks whether the given string contains Java keywords
-	 * @generated NOT
-	 */
-	public static boolean containsKeywords(String s) {
-		for (String k : keywords) {
-			if (s.contains(k))
-				return true;
-		}
-		return false;
-	}
 
 	/**
 	 * Validates the validName constraint of '<em>Test Class</em>'.
@@ -197,11 +185,14 @@ public class JavaModelValidator extends EObjectValidator {
 		if (!Character.isUpperCase(className.charAt(0)))
 			valid = false;
 		
-		// check if the classname contains reserved Java keywords
-		if (containsKeywords(className))
-			valid = false;
+		// check if the classname is a java reserved keyword
+		for (String k : keywords) {
+			if (k.toLowerCase().equals(className.toLowerCase())) {
+				valid = false;
+				break;
+			}
+		}
 
-		
 		if (!valid) {
 			if (diagnostics != null) {
 				diagnostics.add
@@ -236,9 +227,17 @@ public class JavaModelValidator extends EObjectValidator {
 		if (!packageName.matches("(^(?:[a-z_]+(?:\\d*[a-zA-Z_]*)*)(?:\\.[a-z_]+(?:\\d*[a-zA-Z_]*)*)*$)"))
 			valid = false;
 		
-		// check if the packageName contains reserved Java keywords
-		if (containsKeywords(packageName))
-			valid = false;
+		// check that package name doesn't include reserved java keywords
+		for (String k : keywords) {
+			if (packageName.contains(k+"."))
+				valid = false;
+			if (packageName.contains("."+k+"."))
+				valid = false;
+			if (packageName.contains("."+k))
+				valid = false;
+			if (packageName.equals(k))
+				valid = false;
+		}
 
 		if (!valid) {
 			if (diagnostics != null) {
@@ -329,9 +328,13 @@ public class JavaModelValidator extends EObjectValidator {
 		if (!isValidJavaIdentifier(methodName))
 			valid = false;
 		
-		// check if the method name contains reserved Java keywords
-		if (containsKeywords(methodName))
-			valid = false;
+		// check if the method name is not a java reserved keyword
+		for (String k : keywords) {
+			if (methodName.toLowerCase().equals(k.toLowerCase())) {
+				valid = false;
+				break;
+			}
+		}
 		
 		if (!valid) {
 			if (diagnostics != null) {
