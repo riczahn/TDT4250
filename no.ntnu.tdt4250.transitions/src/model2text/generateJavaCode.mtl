@@ -18,7 +18,7 @@ package [ testClass._package /];
 
 [template public generateImports(imports : Collection(String))]
 [for (imp : String | imports)] 
-[ imp /];
+[ imp /]
 [/for]
 [/template]
 
