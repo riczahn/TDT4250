@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see javatest.JavaModelPackage#getTestClass()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='validName validPackage'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='validName validPackage validImports'"
  * @generated
  */
 public interface TestClass extends EObject {

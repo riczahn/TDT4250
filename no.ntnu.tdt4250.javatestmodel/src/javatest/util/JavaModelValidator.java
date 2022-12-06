@@ -137,6 +137,7 @@ public class JavaModelValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(testClass, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTestClass_validName(testClass, diagnostics, context);
 		if (result || diagnostics != null) result &= validateTestClass_validPackage(testClass, diagnostics, context);
+		if (result || diagnostics != null) result &= validateTestClass_validImports(testClass, diagnostics, context);
 		return result;
 	}
 	
@@ -248,6 +249,42 @@ public class JavaModelValidator extends EObjectValidator {
 						 0,
 						 "_UI_GenericConstraint_diagnostic",
 						 new Object[] { "validPackage", getObjectLabel(testClass, context) },
+						 new Object[] { testClass },
+						 context));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * Validates the validImports constraint of '<em>Test Class</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateTestClass_validImports(TestClass testClass, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		boolean valid = true;
+		
+		for (String _import : testClass.getImports()) {
+			if (!_import.startsWith("import "))
+				valid = false;
+			// check that there are no spaces in the import string 
+			if (_import.substring(7).trim().contains(" "))
+				valid = false;
+			if (!_import.trim().endsWith(";"))
+				valid = false;
+		}
+		
+		if (!valid) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(createDiagnostic
+						(Diagnostic.ERROR,
+						 DIAGNOSTIC_SOURCE,
+						 0,
+						 "_UI_GenericConstraint_diagnostic",
+						 new Object[] { "validImports", getObjectLabel(testClass, context) },
 						 new Object[] { testClass },
 						 context));
 			}

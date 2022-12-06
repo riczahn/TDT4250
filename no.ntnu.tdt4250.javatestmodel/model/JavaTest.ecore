@@ -7,7 +7,7 @@
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="TestClass">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="validName validPackage"/>
+      <details key="constraints" value="validName validPackage validImports"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

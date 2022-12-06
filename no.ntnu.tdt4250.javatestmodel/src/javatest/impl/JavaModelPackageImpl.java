@@ -459,7 +459,7 @@ public class JavaModelPackageImpl extends EPackageImpl implements JavaModelPacka
 		  (testClassEClass,
 		   source,
 		   new String[] {
-			   "constraints", "validName validPackage"
+			   "constraints", "validName validPackage validImports"
 		   });
 		addAnnotation
 		  (methodEClass,

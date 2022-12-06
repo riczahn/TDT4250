@@ -6,8 +6,8 @@
     xmlns:javatest="platform://plugin/no.ntnu.tdt4250.javatestmodel/JavaTest.ecore"
     name="TestClass"
     package="org.example._int">
-  <imports>import org.apache.hc.client5.http.classic.HttpClient</imports>
-  <imports>import org.apache.hc.client5.http.classic.methods.HttpPost</imports>
+  <imports>import org.apache.hc.client5.http.classic.HttpClient;</imports>
+  <imports>import org.apache.hc.client5.http.classic.methods.HttpPost;</imports>
   <testMethods
       name="CreateAndGetTeacher">
     <statements
