@@ -182,8 +182,8 @@ public class JavaModelValidator extends EObjectValidator {
 		if (!isValidJavaIdentifier(className))
 			valid = false;
 		
-		// check that it is capitalized
-		if (!Character.isUpperCase(className.charAt(0)))
+		// check that it is capitalized and length > 0
+		if (className.length() == 0 || !Character.isUpperCase(className.charAt(0)))
 			valid = false;
 		
 		// check if the classname is a java reserved keyword
@@ -361,8 +361,15 @@ public class JavaModelValidator extends EObjectValidator {
 		
 		String methodName = method.getName();
 		
+		if (methodName.length() == 0)
+			valid = false;
+		
 		// check that the string is a valid java identifier
 		if (!isValidJavaIdentifier(methodName))
+			valid = false;
+		
+		// check that the first character is lowercase
+		if (!Character.isLowerCase(methodName.charAt(0)))
 			valid = false;
 		
 		// check if the method name is not a java reserved keyword

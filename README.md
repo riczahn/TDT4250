@@ -2,7 +2,6 @@
 
 ## OPEN TO-DOs
 * README
-	* Fix links to model section
 	* Describe the models in Model section
 	* Extend Usage section by explaining how to run the transitions
 * Model-to-Model-Transition
@@ -14,25 +13,29 @@
 	* Why are we generating so many empty lines?
 * Sirius
 	* Is it working?
-* Constraints
-	* Do we need to introduce some OCL constraints?
-
 
 ## Description
 This repository contains an eclipse plugin which can automatically generate test code for a web API. The test cases are specified as a sequence of REST requests, containing all the necessary information to execute the given HTTP requests, including parameters, headers and expected response codes. Further information on the data structures can be seen in the [Models section](#Models).
 
 ## Usage
 The test code generation can be triggered in different ways.
-1. **A Model-to-Model transition**; starting from a [TestSuite](#Models) specification file, containing all the use cases in JSON format
-2. **A Model-to-Text transition**; starting from a model of the to be generated java test class, conforming to the [JavaTestModel](#Models)
+1. **A Model-to-Model transition**; starting from a [TestSuite](#testsuite-model) specification file, containing all the use cases in JSON format
+2. **A Model-to-Text transition**; starting from a model of the to be generated java test class, conforming to the [JavaTestModel](#javatestmodel)
 
 ## Models
 
 #### TestSuite Model
-t.b.d.
+![testsuite model](resources/testsuitemodel.png)
 
 #### JavaTestModel
-t.b.d.
+![javatest model](resources/javatestmodel.png)
+
+Validations:
+- `TestClass` `name` attribute must be a valid java identifier and the first letter must be capitalized
+- `TestClass` `package` name must be a valid java package name 
+- `TestClass` `imports` must start with import and end with a semicolon
+- `Method` `annotations` must start with @ and be a valid java identifier
+- `Method` `name` must be a valid java identifier and the first letter must be lowercase
 
 ## Project Context
 This repository is the results of the project in the course TDT4250 Advanced Software Design at the Norwegian University of Science and Technology in 2022.
