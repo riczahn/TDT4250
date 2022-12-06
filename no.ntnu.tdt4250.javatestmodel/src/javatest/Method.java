@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see javatest.JavaModelPackage#getMethod()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='validAnnotations validMethodName'"
  * @generated
  */
 public interface Method extends EObject {

@@ -461,6 +461,12 @@ public class JavaModelPackageImpl extends EPackageImpl implements JavaModelPacka
 		   new String[] {
 			   "constraints", "validName validPackage"
 		   });
+		addAnnotation
+		  (methodEClass,
+		   source,
+		   new String[] {
+			   "constraints", "validAnnotations validMethodName"
+		   });
 	}
 
 } //JavaModelPackageImpl

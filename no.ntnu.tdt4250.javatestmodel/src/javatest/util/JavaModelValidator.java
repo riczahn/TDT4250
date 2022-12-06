@@ -2,13 +2,13 @@
  */
 package javatest.util;
 
-import java.util.Arrays;
 import java.util.Map;
 
 import javatest.*;
 
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.DiagnosticChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EPackage;
@@ -170,7 +170,11 @@ public class JavaModelValidator extends EObjectValidator {
 	 * @generated NOT
 	 */
 	public static boolean containsKeywords(String s) {
-		return Arrays.stream(keywords).anyMatch(s::contains);
+		for (String k : keywords) {
+			if (s.contains(k))
+				return true;
+		}
+		return false;
 	}
 
 	/**
@@ -259,7 +263,91 @@ public class JavaModelValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateMethod(Method method, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(method, diagnostics, context);
+		if (!validate_NoCircularContainment(method, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(method, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(method, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(method, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(method, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(method, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(method, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(method, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(method, diagnostics, context);
+		if (result || diagnostics != null) result &= validateMethod_validAnnotations(method, diagnostics, context);
+		if (result || diagnostics != null) result &= validateMethod_validMethodName(method, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * Validates the validAnnotations constraint of '<em>Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean validateMethod_validAnnotations(Method method, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		
+		boolean valid = true;
+		
+		EList<String> annotations = method.getAnnotations();
+		
+		for (String annotation : annotations) {
+			if (!annotation.startsWith("@") || !isValidJavaIdentifier(annotation.substring(1))) {
+				valid = false;
+				break;
+			}
+		}
+		
+		if (!valid) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(createDiagnostic
+						(Diagnostic.ERROR,
+						 DIAGNOSTIC_SOURCE,
+						 0,
+						 "_UI_GenericConstraint_diagnostic",
+						 new Object[] { "validAnnotations", getObjectLabel(method, context) },
+						 new Object[] { method },
+						 context));
+			}
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * Validates the validMethodName constraint of '<em>Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public boolean validateMethod_validMethodName(Method method, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		
+		boolean valid = true;
+		
+		String methodName = method.getName();
+		
+		// check that the string is a valid java identifier
+		if (!isValidJavaIdentifier(methodName))
+			valid = false;
+		
+		// check if the method name contains reserved Java keywords
+		if (containsKeywords(methodName))
+			valid = false;
+		
+		if (!valid) {
+			if (diagnostics != null) {
+				diagnostics.add
+					(createDiagnostic
+						(Diagnostic.ERROR,
+						 DIAGNOSTIC_SOURCE,
+						 0,
+						 "_UI_GenericConstraint_diagnostic",
+						 new Object[] { "validMethodName", getObjectLabel(method, context) },
+						 new Object[] { method },
+						 context));
+			}
+			return false;
+		}
+		return true;
 	}
 
 	/**

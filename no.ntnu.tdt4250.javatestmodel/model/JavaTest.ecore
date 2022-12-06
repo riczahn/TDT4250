@@ -20,6 +20,9 @@
         eType="#//Method" containment="true" eOpposite="#//Method/testClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Method">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="validAnnotations validMethodName"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="#//Visibility"
         defaultValueLiteral="PACKAGE_PRIVATE"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
