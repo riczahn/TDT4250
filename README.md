@@ -29,10 +29,12 @@ The test code generation can be triggered in different ways.
 ## Models
 
 #### TestSuite Model
-t.b.d.
+Some explanation on what the ecore model is, link to the model
+![TestSuite UML diagram](img/testsuiteUML.png)
 
 #### JavaTestModel
-t.b.d.
+some explanation on what this ecore model is and link to it
+![JavaTest UML diagram](img/javatestUML.png)
 
 ## Project Context
 This repository is the results of the project in the course TDT4250 Advanced Software Design at the Norwegian University of Science and Technology in 2022.
