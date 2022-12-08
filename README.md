@@ -19,7 +19,7 @@
 
 
 ## Description
-This repository contains an eclipse plugin which can automatically generate test code for a web API. The test cases are specified as a sequence of REST requests, containing all the necessary information to execute the given HTTP requests, including parameters, headers and expected response codes. Further information on the data structures can be seen in the [Models section](#Models).
+Our project is about generating java unit tests. This repository contains an eclipse plugin which can automatically generate test code for a web API. The test cases are specified as a sequence of REST requests, containing all the necessary information to execute the given HTTP requests, including parameters, headers and expected response codes. Further information on the data structures can be seen in the [Models section](#Models).
 
 ## Usage
 The test code generation can be triggered in different ways.
