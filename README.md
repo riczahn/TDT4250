@@ -23,8 +23,9 @@ Our project is about generating java unit tests. This repository contains an ecl
 
 ## Usage
 The test code generation can be triggered in different ways.
-1. **A Model-to-Model transition**; starting from a [TestSuite](#Models) specification file, containing all the use cases in JSON format
-2. **A Model-to-Text transition**; starting from a model of the to be generated java test class, conforming to the [JavaTestModel](#Models)
+1. **A Model-to-Model transition**; starting from a [TestSuite](#Models) specification file, containing all the use cases in JSON format. This is done by running the TestSuiteConverter java class, located in the transitions/src/modeltomodel package, which performs the transformation.
+2. **A Model-to-Text transition**; starting from a model of the to be generated java test class, conforming to the [JavaTestModel](#Models). This transition is done by running the generateJavaCode mtl file, which is located in the transitions/src/model2text package. 
+[comment]: <> (should we explain run configurations? we probably should right)
 
 ## Models
 
@@ -40,7 +41,7 @@ some explanation on what this ecore model is and link to it
 This repository is the results of the project in the course TDT4250 Advanced Software Design at the Norwegian University of Science and Technology in 2022.
 
 ## Authors
-Davide Aimar
-Gaute Brandser
-Martin Mayr
+Davide Aimar, 
+Gaute Brandser, 
+Martin Mayr, 
 Richard Zahn
