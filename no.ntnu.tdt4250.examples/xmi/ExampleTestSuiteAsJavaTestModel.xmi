@@ -6,7 +6,7 @@
     <statements xsi:type="javatest:LineStatement" lineContent="var httpRequest0 = new HttpPost(&quot;https://api.ntnu.no/teachers&quot;);"/>
     <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);"/>
     <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setHeader(&quot;Accept&quot;, &quot;application/json&quot;);"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="String body0 = &quot;{&quot;name&quot;: &quot;Leonardo Montecchi&quot;}&quot;;"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="String body0 = &quot;{\&quot;name\&quot;: \&quot;Leonardo Montecchi\&quot;}&quot;;"/>
     <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setEntity(new StringEntity(body));"/>
     <statements xsi:type="javatest:LineStatement" lineContent="var response0 = HttpClients.createDefault().execute(httpRequest);"/>
     <statements xsi:type="javatest:LineStatement" lineContent="assertThat(response0.getCode()).isIn(201);"/>
@@ -22,7 +22,7 @@
     <statements xsi:type="javatest:LineStatement" lineContent="var httpRequest0 = new HttpPost(&quot;https://api.ntnu.no/teachers&quot;);"/>
     <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setHeader(&quot;Content-Type&quot;, &quot;application/json&quot;);"/>
     <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setHeader(&quot;Accept&quot;, &quot;application/json&quot;);"/>
-    <statements xsi:type="javatest:LineStatement" lineContent="String body0 = &quot;{&quot;name&quot;: &quot;Leonardo Montecchi&quot;}&quot;;"/>
+    <statements xsi:type="javatest:LineStatement" lineContent="String body0 = &quot;{\&quot;name\&quot;: \&quot;Leonardo Montecchi\&quot;}&quot;;"/>
     <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setEntity(new StringEntity(body));"/>
     <statements xsi:type="javatest:LineStatement" lineContent="var response0 = HttpClients.createDefault().execute(httpRequest);"/>
     <statements xsi:type="javatest:LineStatement" lineContent="assertThat(response0.getCode()).isIn(201);"/>

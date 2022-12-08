@@ -11,12 +11,14 @@ import javatest.Statement;
 import javatest.TestClass;
 import javatest.Visibility;
 
+import javatest.util.JavaModelValidator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -119,6 +121,15 @@ public class JavaModelPackageImpl extends EPackageImpl implements JavaModelPacka
 
 		// Initialize created meta-data
 		theJavaModelPackage.initializePackageContents();
+
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theJavaModelPackage,
+			 new EValidator.Descriptor() {
+				 public EValidator getEValidator() {
+					 return JavaModelValidator.INSTANCE;
+				 }
+			 });
 
 		// Mark meta-data to indicate it can't be changed
 		theJavaModelPackage.freeze();
@@ -424,6 +435,38 @@ public class JavaModelPackageImpl extends EPackageImpl implements JavaModelPacka
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation
+		  (this,
+		   source,
+		   new String[] {
+			   "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL"
+		   });
+		addAnnotation
+		  (testClassEClass,
+		   source,
+		   new String[] {
+			   "constraints", "validName validPackage validImports"
+		   });
+		addAnnotation
+		  (methodEClass,
+		   source,
+		   new String[] {
+			   "constraints", "validAnnotations validMethodName"
+		   });
 	}
 
 } //JavaModelPackageImpl
