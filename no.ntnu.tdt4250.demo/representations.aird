@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="platform://plugin/no.ntnu.tdt4250.testsuite/TestSuite.ecore" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_umCfcHevEe2f8c02gw-1cQ" selectedViews="_c6rUIHezEe2kSu-ovfZmgA _ZdYyQHfREe2q9Pes_6M9AA" version="15.0.0.202201261500">
+    <semanticResources>platform:/resource/no.ntnu.tdt4250.design/description/testsuite.odesign</semanticResources>
+    <semanticResources>environment:/viewpoint</semanticResources>
+    <semanticResources>platform:/resource/no.ntnu.tdt4250.testsuite/model/TestSuite.ecore</semanticResources>
+    <semanticResources>ExampleTestSuite.xmi</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_ALxnEHewEe2f8c02gw-1cQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/no.ntnu.tdt4250.design/description/testsuite.odesign#/2/@ownedViewpoints[name='TestSuiteManagement']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_G2P7AXewEe2f8c02gw-1cQ" name="new TestSuitediagram" repPath="#_G2PT8HewEe2f8c02gw-1cQ" changeId="308d4cf8-fd30-4d39-8eb5-fb42b2f5f754">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/no.ntnu.tdt4250.design/description/testsuite.odesign#/2/@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']"/>
+        <target xmi:type="TestSuite" href="ExampleTestSuite.xmi#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_c6rUIHezEe2kSu-ovfZmgA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_dVMs8HezEe2kSu-ovfZmgA" name="TestSuitediagram" repPath="#_dVJpoHezEe2kSu-ovfZmgA" changeId="557df593-ae46-4e46-99b4-196e7f943c56">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']"/>
+        <target xmi:type="TestSuite" href="ExampleTestSuite.xmi#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_ZdYyQHfREe2q9Pes_6M9AA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ZfdO0HfREe2q9Pes_6M9AA" name="TestStep" repPath="#_ZfY9YHfREe2q9Pes_6M9AA" changeId="ac279f49-fc26-4a4b-8329-d90f0f249289">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']"/>
+        <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ZfrRQnfREe2q9Pes_6M9AA" name="TestStep" repPath="#_ZfrRQHfREe2q9Pes_6M9AA" changeId="dc027bca-d390-48de-94bd-a44b2558e549">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']"/>
+        <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.0"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Zf2QYnfREe2q9Pes_6M9AA" name="TestStep" repPath="#_Zf2QYHfREe2q9Pes_6M9AA" changeId="9e90c2a1-0e48-4ee6-9da9-17455c57567f">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']"/>
+        <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.1"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_EkBq0HfeEe2SVvwkdOgLaw" name="TestStep" repPath="#_Ej_OkHfeEe2SVvwkdOgLaw" changeId="e6aecc97-c1f6-41f6-b739-96786b952955">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']"/>
+        <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Gw4j8HfeEe2SVvwkdOgLaw" name="TestStep" repPath="#_Gw384HfeEe2SVvwkdOgLaw" changeId="3f965445-cf8c-465e-8efd-e40ba77c4beb">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_G2PT8HewEe2f8c02gw-1cQ">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_G2RJIHewEe2f8c02gw-1cQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_G2RJIXewEe2f8c02gw-1cQ" type="Sirius" element="_G2PT8HewEe2f8c02gw-1cQ" measurementUnit="Pixel">
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_G2RJInewEe2f8c02gw-1cQ"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_G2RwMHewEe2f8c02gw-1cQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_G2RwMXewEe2f8c02gw-1cQ"/>
+    </ownedAnnotationEntries>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/no.ntnu.tdt4250.design/description/testsuite.odesign#/2/@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_G2P7AHewEe2f8c02gw-1cQ"/>
+    <target xmi:type="TestSuite" href="ExampleTestSuite.xmi#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_dVJpoHezEe2kSu-ovfZmgA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_dVUowHezEe2kSu-ovfZmgA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_dVUowXezEe2kSu-ovfZmgA" type="Sirius" element="_dVJpoHezEe2kSu-ovfZmgA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_UpJAIHfREe2q9Pes_6M9AA" type="2003" element="_DgMswHfSEe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_UpLcYHfREe2q9Pes_6M9AA" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_UpN4oHfREe2q9Pes_6M9AA" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_Dil5cHfSEe2q9Pes_6M9AA" type="3010" element="_DgPJAHfSEe2q9Pes_6M9AA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_Dil5cXfSEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Dil5cnfSEe2q9Pes_6M9AA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DimggHfSEe2q9Pes_6M9AA" type="3010" element="_DgPJAXfSEe2q9Pes_6M9AA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_DimggXfSEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_DimggnfSEe2q9Pes_6M9AA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_UpN4oXfREe2q9Pes_6M9AA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_UpN4onfREe2q9Pes_6M9AA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_UpJAIXfREe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpJAInfREe2q9Pes_6M9AA" x="64" y="48" width="335" height="151"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_UpOfsHfREe2q9Pes_6M9AA" type="2003" element="_DgN64XfSEe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_UpPGwHfREe2q9Pes_6M9AA" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_UpPGwXfREe2q9Pes_6M9AA" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_DinHkHfSEe2q9Pes_6M9AA" type="3010" element="_DgPwEHfSEe2q9Pes_6M9AA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_DinHkXfSEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_DinHknfSEe2q9Pes_6M9AA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DinHk3fSEe2q9Pes_6M9AA" type="3010" element="_DgQXIHfSEe2q9Pes_6M9AA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_DinHlHfSEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_DinHlXfSEe2q9Pes_6M9AA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_UpPGwnfREe2q9Pes_6M9AA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_UpPGw3fREe2q9Pes_6M9AA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_UpOfsXfREe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UpOfsnfREe2q9Pes_6M9AA" x="64" y="216" width="335" height="143"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_F5Gd0HfSEe2q9Pes_6M9AA" type="2001" element="_F4UasHfSEe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_F5HE4HfSEe2q9Pes_6M9AA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_F5HE4XfSEe2q9Pes_6M9AA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_F5HE4nfSEe2q9Pes_6M9AA" type="3003" element="_F4UasXfSEe2q9Pes_6M9AA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_F5HE43fSEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F5HE5HfSEe2q9Pes_6M9AA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_F5Gd0XfSEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F5Gd0nfSEe2q9Pes_6M9AA" x="-4" y="-4" width="333" height="30"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_dVUownezEe2kSu-ovfZmgA"/>
+        <edges xmi:type="notation:Edge" xmi:id="_F5PnwHfSEe2q9Pes_6M9AA" type="4001" element="_F45pgHfSEe2q9Pes_6M9AA" source="_F5Gd0HfSEe2q9Pes_6M9AA" target="_UpJAIHfREe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_F5Q14HfSEe2q9Pes_6M9AA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F5Q14XfSEe2q9Pes_6M9AA" x="-3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_F5T5MHfSEe2q9Pes_6M9AA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F5T5MXfSEe2q9Pes_6M9AA" x="12"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_F5UgQHfSEe2q9Pes_6M9AA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F5UgQXfSEe2q9Pes_6M9AA" x="5" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_F5PnwXfSEe2q9Pes_6M9AA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_F5PnwnfSEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_F5Pnw3fSEe2q9Pes_6M9AA" points="[0, 9, -40, -123]$[0, 132, -40, 0]$[39, 132, -1, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_F5eRQHfSEe2q9Pes_6M9AA" id="(0.08708708708708708,0.7)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_F5eRQXfSEe2q9Pes_6M9AA" id="(0.003003003003003003,0.6778523489932886)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_F5e4UHfSEe2q9Pes_6M9AA" type="4001" element="_F4_wIHfSEe2q9Pes_6M9AA" source="_F5Gd0HfSEe2q9Pes_6M9AA" target="_UpOfsHfREe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_F5e4VHfSEe2q9Pes_6M9AA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F5e4VXfSEe2q9Pes_6M9AA" x="-10" y="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_F5e4VnfSEe2q9Pes_6M9AA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F5e4V3fSEe2q9Pes_6M9AA" x="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_F5ffYHfSEe2q9Pes_6M9AA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_F5ffYXfSEe2q9Pes_6M9AA" x="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_F5e4UXfSEe2q9Pes_6M9AA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_F5e4UnfSEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_F5e4U3fSEe2q9Pes_6M9AA" points="[1, 11, -193, -331]$[1, 293, -193, -49]$[41, 293, -153, -49]$[41, 293, -153, -49]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_F5gtgHfSEe2q9Pes_6M9AA" id="(0.08108108108108109,0.6333333333333333)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_F5gtgXfSEe2q9Pes_6M9AA" id="(0.4618650063676242,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_dWJIIXezEe2kSu-ovfZmgA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_dWJIInezEe2kSu-ovfZmgA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_DgMswHfSEe2q9Pes_6M9AA" name="Create and Get Teacher" incomingEdges="_F45pgHfSEe2q9Pes_6M9AA">
+      <target xmi:type="TestCase" href="ExampleTestSuite.xmi#//@testCases.0"/>
+      <semanticElements xmi:type="TestCase" href="ExampleTestSuite.xmi#//@testCases.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_DgNT0HfSEe2q9Pes_6M9AA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="204,242,166" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DgPJAHfSEe2q9Pes_6M9AA" name="0 - POST - https://api.ntnu.no/teachers">
+        <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0"/>
+        <semanticElements xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_QTbHonfSEe2q9Pes_6M9AA" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@subNodeMappings[name='TestStep']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@subNodeMappings[name='TestStep']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DgPJAXfSEe2q9Pes_6M9AA" name="1 - GET - https://api.ntnu.no/teachers/{teacherId}">
+        <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+        <semanticElements xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_QTbusHfSEe2q9Pes_6M9AA" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@subNodeMappings[name='TestStep']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@subNodeMappings[name='TestStep']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_DgN64XfSEe2q9Pes_6M9AA" name="Create and Get Teacher Again" incomingEdges="_F4_wIHfSEe2q9Pes_6M9AA">
+      <target xmi:type="TestCase" href="ExampleTestSuite.xmi#//@testCases.1"/>
+      <semanticElements xmi:type="TestCase" href="ExampleTestSuite.xmi#//@testCases.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_DgN64nfSEe2q9Pes_6M9AA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="204,242,166" foregroundColor="204,242,166">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DgPwEHfSEe2q9Pes_6M9AA" name="0 - POST - https://api.ntnu.no/teachers">
+        <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.0"/>
+        <semanticElements xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_QTbusXfSEe2q9Pes_6M9AA" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@subNodeMappings[name='TestStep']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@subNodeMappings[name='TestStep']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DgQXIHfSEe2q9Pes_6M9AA" name="1 - GET - https://api.ntnu.no/teachers/{teacherId}">
+        <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.1"/>
+        <semanticElements xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.1"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_QTcVwHfSEe2q9Pes_6M9AA" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@subNodeMappings[name='TestStep']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@subNodeMappings[name='TestStep']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_F4UasHfSEe2q9Pes_6M9AA" name="ExampleTestSuite" outgoingEdges="_F45pgHfSEe2q9Pes_6M9AA _F4_wIHfSEe2q9Pes_6M9AA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="TestSuite" href="ExampleTestSuite.xmi#/"/>
+      <semanticElements xmi:type="TestSuite" href="ExampleTestSuite.xmi#/"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_F4UasXfSEe2q9Pes_6M9AA" labelSize="12" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@additionalLayers[name='TestSuite']/@nodeMappings[name='TestSuite']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@additionalLayers[name='TestSuite']/@nodeMappings[name='TestSuite']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_F45pgHfSEe2q9Pes_6M9AA" sourceNode="_F4UasHfSEe2q9Pes_6M9AA" targetNode="_DgMswHfSEe2q9Pes_6M9AA">
+      <target xmi:type="TestSuite" href="ExampleTestSuite.xmi#/"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_F4968HfSEe2q9Pes_6M9AA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@additionalLayers[name='TestSuite']/@edgeMappings[name='TestCases']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_F4-iAHfSEe2q9Pes_6M9AA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@additionalLayers[name='TestSuite']/@edgeMappings[name='TestCases']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_F4_wIHfSEe2q9Pes_6M9AA" sourceNode="_F4UasHfSEe2q9Pes_6M9AA" targetNode="_DgN64XfSEe2q9Pes_6M9AA">
+      <target xmi:type="TestSuite" href="ExampleTestSuite.xmi#/"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_F4_wIXfSEe2q9Pes_6M9AA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@additionalLayers[name='TestSuite']/@edgeMappings[name='TestCases']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_F4_wInfSEe2q9Pes_6M9AA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@additionalLayers[name='TestSuite']/@edgeMappings[name='TestCases']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_dVK3wHezEe2kSu-ovfZmgA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@additionalLayers[name='TestSuite']"/>
+    <target xmi:type="TestSuite" href="ExampleTestSuite.xmi#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_ZfY9YHfREe2q9Pes_6M9AA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Zfec8HfREe2q9Pes_6M9AA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_Zfec8XfREe2q9Pes_6M9AA" type="Sirius" element="_ZfY9YHfREe2q9Pes_6M9AA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_Zfm_0HfREe2q9Pes_6M9AA" visible="false" type="2001" element="_ZfiHUHfREe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_Zfnm4HfREe2q9Pes_6M9AA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Zfnm4XfREe2q9Pes_6M9AA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZfoN8HfREe2q9Pes_6M9AA" type="3003" element="_ZfjVcHfREe2q9Pes_6M9AA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ZfoN8XfREe2q9Pes_6M9AA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZfoN8nfREe2q9Pes_6M9AA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Zfm_0XfREe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zfm_0nfREe2q9Pes_6M9AA" x="72" y="132" width="250" height="70"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Naqf4HfUEe2q9Pes_6M9AA" type="2001" element="_NaJigHfUEe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_NarG8HfUEe2q9Pes_6M9AA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_NarG8XfUEe2q9Pes_6M9AA" x="31" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_NawmgHfUEe2q9Pes_6M9AA" type="3017" element="_NaNz8HfUEe2q9Pes_6M9AA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_NawmgXfUEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NawmgnfUEe2q9Pes_6M9AA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Naqf4XfUEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Naqf4nfUEe2q9Pes_6M9AA" x="92" y="91" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_NaruAHfUEe2q9Pes_6M9AA" type="2001" element="_NaObAXfUEe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_NasVEHfUEe2q9Pes_6M9AA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_NasVEXfUEe2q9Pes_6M9AA" x="31" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Nax0oHfUEe2q9Pes_6M9AA" type="3017" element="_NaObAnfUEe2q9Pes_6M9AA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Nax0oXfUEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Nax0onfUEe2q9Pes_6M9AA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_NaruAXfUEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NaruAnfUEe2q9Pes_6M9AA" x="180" y="120" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_jzpUEHfUEe2SVvwkdOgLaw" visible="false" type="2001" element="_jzkbkHfUEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_jzvasHfUEe2SVvwkdOgLaw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_jzvasXfUEe2SVvwkdOgLaw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_xd0lEHfUEe2SVvwkdOgLaw" type="3004" element="_xdxhwXfUEe2SVvwkdOgLaw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_xd0lEXfUEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xd0lEnfUEe2SVvwkdOgLaw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_jzpUEXfUEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fillColor="9145334"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jzpUEnfUEe2SVvwkdOgLaw" x="124" y="168" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ZtS5sHfVEe2SVvwkdOgLaw" type="2001" element="_ZswuMXfVEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_ZtTgwnfVEe2SVvwkdOgLaw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ZtTgw3fVEe2SVvwkdOgLaw" x="-21" y="31"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZtZnYHfVEe2SVvwkdOgLaw" type="3004" element="_ZsxVQHfVEe2SVvwkdOgLaw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ZtZnYXfVEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZtZnYnfVEe2SVvwkdOgLaw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ZtTgwHfVEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZtTgwXfVEe2SVvwkdOgLaw" x="452" y="136" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_9aIwoHfVEe2SVvwkdOgLaw" type="2003" element="_9Z5gEHfVEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_9aJ-wHfVEe2SVvwkdOgLaw" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_9aLM4HfVEe2SVvwkdOgLaw" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_LOqQcHfWEe2SVvwkdOgLaw" type="3010" element="_LOkw4XfWEe2SVvwkdOgLaw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_LOqQcXfWEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_LOqQcnfWEe2SVvwkdOgLaw"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_9aLM4XfVEe2SVvwkdOgLaw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_9aLM4nfVEe2SVvwkdOgLaw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_9aIwoXfVEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9aIwonfVEe2SVvwkdOgLaw" x="140" y="220" height="59"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_Zfec8nfREe2q9Pes_6M9AA"/>
+        <edges xmi:type="notation:Edge" xmi:id="_NazCwHfUEe2q9Pes_6M9AA" visible="false" type="4001" element="_NaUhoHfUEe2q9Pes_6M9AA" source="_Zfm_0HfREe2q9Pes_6M9AA" target="_Naqf4HfUEe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_Na0Q4HfUEe2q9Pes_6M9AA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Na0Q4XfUEe2q9Pes_6M9AA" x="-4" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Na0Q4nfUEe2q9Pes_6M9AA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Na0Q43fUEe2q9Pes_6M9AA" x="10" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Na038HfUEe2q9Pes_6M9AA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Na1fAHfUEe2q9Pes_6M9AA" x="11" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_NazCwXfUEe2q9Pes_6M9AA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_NazCwnfUEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NazCw3fUEe2q9Pes_6M9AA" points="[0, 0, 118, 102]$[-118, -102, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Na2GEHfUEe2q9Pes_6M9AA" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Na2GEXfUEe2q9Pes_6M9AA" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Na2GEnfUEe2q9Pes_6M9AA" visible="false" type="4001" element="_NaWW0HfUEe2q9Pes_6M9AA" source="_Zfm_0HfREe2q9Pes_6M9AA" target="_NaruAHfUEe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_Na2tIHfUEe2q9Pes_6M9AA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Na2tIXfUEe2q9Pes_6M9AA" x="1" y="-6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Na3UMHfUEe2q9Pes_6M9AA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Na3UMXfUEe2q9Pes_6M9AA" x="7" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Na4iUHfUEe2q9Pes_6M9AA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Na4iUXfUEe2q9Pes_6M9AA" x="6" y="6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Na2GE3fUEe2q9Pes_6M9AA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Na2GFHfUEe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Na2GFXfUEe2q9Pes_6M9AA" points="[0, 0, 78, 62]$[-78, -62, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Na5JYHfUEe2q9Pes_6M9AA" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Na5JYXfUEe2q9Pes_6M9AA" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_sDem0HfVEe2SVvwkdOgLaw" visible="false" type="4001" element="_sDYgMHfVEe2SVvwkdOgLaw" source="_Zfm_0HfREe2q9Pes_6M9AA" target="_ZtS5sHfVEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_sDfN4HfVEe2SVvwkdOgLaw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sDfN4XfVEe2SVvwkdOgLaw" x="6" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_sDgcAHfVEe2SVvwkdOgLaw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sDgcAXfVEe2SVvwkdOgLaw" x="-2" y="-12"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_sDhDEHfVEe2SVvwkdOgLaw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sDhDEXfVEe2SVvwkdOgLaw" x="-6" y="-11"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_sDem0XfVEe2SVvwkdOgLaw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_sDem0nfVEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sDem03fVEe2SVvwkdOgLaw" points="[70, -35, -124, 61]$[179, -89, -15, 7]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sDkGYHfVEe2SVvwkdOgLaw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sDkGYXfVEe2SVvwkdOgLaw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_UZ7tMHfWEe2SVvwkdOgLaw" type="4001" element="_UZ5Q8HfWEe2SVvwkdOgLaw" source="_9aIwoHfVEe2SVvwkdOgLaw" target="_ZtS5sHfVEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_UZ8UQHfWEe2SVvwkdOgLaw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UZ8UQXfWEe2SVvwkdOgLaw" x="-4" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_UZ8UQnfWEe2SVvwkdOgLaw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UZ8UQ3fWEe2SVvwkdOgLaw" x="3" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_UZ8URHfWEe2SVvwkdOgLaw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UZ8URXfWEe2SVvwkdOgLaw" x="3" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_UZ7tMXfWEe2SVvwkdOgLaw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_UZ7tMnfWEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_UZ7tM3fWEe2SVvwkdOgLaw" points="[43, -22, -135, 69]$[163, -84, -15, 7]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UZ9iYHfWEe2SVvwkdOgLaw" id="(0.5,0.39473684210526316)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UZ9iYXfWEe2SVvwkdOgLaw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_V93lIHfWEe2SVvwkdOgLaw" type="4001" element="_V9z6wHfWEe2SVvwkdOgLaw" source="_9aIwoHfVEe2SVvwkdOgLaw" target="_Naqf4HfUEe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_V93lJHfWEe2SVvwkdOgLaw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V93lJXfWEe2SVvwkdOgLaw" x="9" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_V93lJnfWEe2SVvwkdOgLaw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V93lJ3fWEe2SVvwkdOgLaw" x="-3" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_V93lKHfWEe2SVvwkdOgLaw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V93lKXfWEe2SVvwkdOgLaw" x="-4" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_V93lIXfWEe2SVvwkdOgLaw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_V93lInfWEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_V93lI3fWEe2SVvwkdOgLaw" points="[-30, -22, 152, 114]$[-167, -125, 15, 11]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V94MMHfWEe2SVvwkdOgLaw" id="(0.5,0.39473684210526316)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V94MMXfWEe2SVvwkdOgLaw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_V94MMnfWEe2SVvwkdOgLaw" type="4001" element="_V90h0HfWEe2SVvwkdOgLaw" source="_9aIwoHfVEe2SVvwkdOgLaw" target="_NaruAHfUEe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_V94zQHfWEe2SVvwkdOgLaw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V94zQXfWEe2SVvwkdOgLaw" x="4" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_V94zQnfWEe2SVvwkdOgLaw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V94zQ3fWEe2SVvwkdOgLaw" x="-2" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_V94zRHfWEe2SVvwkdOgLaw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_V94zRXfWEe2SVvwkdOgLaw" x="-2" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_V94MM3fWEe2SVvwkdOgLaw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_V94MNHfWEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_V94MNXfWEe2SVvwkdOgLaw" points="[-20, -22, 74, 85]$[-81, -92, 13, 15]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V95aUHfWEe2SVvwkdOgLaw" id="(0.5,0.39473684210526316)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_V95aUXfWEe2SVvwkdOgLaw" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ZflKoHfREe2q9Pes_6M9AA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_ZflxsHfREe2q9Pes_6M9AA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ZfiHUHfREe2q9Pes_6M9AA" name="1 - GET - https://api.ntnu.no/teachers/{teacherId}" visible="false" outgoingEdges="_NaUhoHfUEe2q9Pes_6M9AA _NaWW0HfUEe2q9Pes_6M9AA _sDYgMHfVEe2SVvwkdOgLaw" width="25" height="7" resizeKind="NSEW">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+      <semanticElements xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_ZfjVcHfREe2q9Pes_6M9AA" labelSize="12" labelPosition="node" width="25" height="7" color="204,242,166">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@nodeMappings[name='TestStep']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@nodeMappings[name='TestStep']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_NaJigHfUEe2q9Pes_6M9AA" name="Accept = application/json" tooltipText="Accept = application/json" incomingEdges="_NaUhoHfUEe2q9Pes_6M9AA _V9z6wHfWEe2SVvwkdOgLaw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="Header" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1/@headers.0"/>
+      <semanticElements xmi:type="Header" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1/@headers.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_NaNz8HfUEe2q9Pes_6M9AA" labelSize="12" color="194,239,255">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_NaObAXfUEe2q9Pes_6M9AA" name="Content-type = application/json" tooltipText="Content-type = application/json" incomingEdges="_NaWW0HfUEe2q9Pes_6M9AA _V90h0HfWEe2SVvwkdOgLaw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="Header" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1/@headers.1"/>
+      <semanticElements xmi:type="Header" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1/@headers.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_NaObAnfUEe2q9Pes_6M9AA" labelSize="12" color="194,239,255">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_NaUhoHfUEe2q9Pes_6M9AA" visible="false" sourceNode="_ZfiHUHfREe2q9Pes_6M9AA" targetNode="_NaJigHfUEe2q9Pes_6M9AA">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_NaVIsHfUEe2q9Pes_6M9AA" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_NaVIsXfUEe2q9Pes_6M9AA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_NaWW0HfUEe2q9Pes_6M9AA" visible="false" sourceNode="_ZfiHUHfREe2q9Pes_6M9AA" targetNode="_NaObAXfUEe2q9Pes_6M9AA">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_NaW94HfUEe2q9Pes_6M9AA" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_NaW94XfUEe2q9Pes_6M9AA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_jzkbkHfUEe2SVvwkdOgLaw" name="teacherId" visible="false" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="InferrableParameter" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1/@parameters.0"/>
+      <semanticElements xmi:type="InferrableParameter" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1/@parameters.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_xdxhwXfUEe2SVvwkdOgLaw" labelSize="12" shape="triangle" color="246,139,139">
+        <customFeatures>color</customFeatures>
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@nodeMappings[name='Parameter']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@nodeMappings[name='Parameter']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ZswuMXfVEe2SVvwkdOgLaw" name="teacherId" incomingEdges="_sDYgMHfVEe2SVvwkdOgLaw _UZ5Q8HfWEe2SVvwkdOgLaw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="InferrableParameter" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1/@parameters.0"/>
+      <semanticElements xmi:type="InferrableParameter" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1/@parameters.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_ZsxVQHfVEe2SVvwkdOgLaw" labelSize="12" shape="triangle">
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@nodeMappings[name='Parameter']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@nodeMappings[name='Parameter']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_sDYgMHfVEe2SVvwkdOgLaw" visible="false" sourceNode="_ZfiHUHfREe2q9Pes_6M9AA" targetNode="_ZswuMXfVEe2SVvwkdOgLaw">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_sDZHQHfVEe2SVvwkdOgLaw" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@edgeMappings[name='parameters']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_sDZHQXfVEe2SVvwkdOgLaw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@edgeMappings[name='parameters']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_9Z5gEHfVEe2SVvwkdOgLaw" name="1 - GET - https://api.ntnu.no/teachers/{teacherId}" outgoingEdges="_UZ5Q8HfWEe2SVvwkdOgLaw _V9z6wHfWEe2SVvwkdOgLaw _V90h0HfWEe2SVvwkdOgLaw">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+      <semanticElements xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_9Z9xgHfVEe2SVvwkdOgLaw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_LOkw4XfWEe2SVvwkdOgLaw" name="Assertion: Status code is 200">
+        <target xmi:type="StatusAssertion" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1/@assertions.0"/>
+        <semanticElements xmi:type="StatusAssertion" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1/@assertions.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_QfMV8HfWEe2SVvwkdOgLaw" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@subNodeMappings[name='Assertion']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@subNodeMappings[name='Assertion']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_UZ5Q8HfWEe2SVvwkdOgLaw" sourceNode="_9Z5gEHfVEe2SVvwkdOgLaw" targetNode="_ZswuMXfVEe2SVvwkdOgLaw">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_UZ5Q8XfWEe2SVvwkdOgLaw" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@edgeMappings[name='parameters']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_UZ5Q8nfWEe2SVvwkdOgLaw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@edgeMappings[name='parameters']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_V9z6wHfWEe2SVvwkdOgLaw" sourceNode="_9Z5gEHfVEe2SVvwkdOgLaw" targetNode="_NaJigHfUEe2q9Pes_6M9AA">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_V9z6wXfWEe2SVvwkdOgLaw" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_V9z6wnfWEe2SVvwkdOgLaw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_V90h0HfWEe2SVvwkdOgLaw" sourceNode="_9Z5gEHfVEe2SVvwkdOgLaw" targetNode="_NaObAXfUEe2q9Pes_6M9AA">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_V90h0XfWEe2SVvwkdOgLaw" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_V90h0nfWEe2SVvwkdOgLaw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_ZfcnwHfREe2q9Pes_6M9AA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']"/>
+    <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.1"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_ZfrRQHfREe2q9Pes_6M9AA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Zfr4UHfREe2q9Pes_6M9AA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_Zfr4UXfREe2q9Pes_6M9AA" type="Sirius" element="_ZfrRQHfREe2q9Pes_6M9AA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_ZfzNEnfREe2q9Pes_6M9AA" visible="false" type="2001" element="_ZfxX4HfREe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_Zfz0IHfREe2q9Pes_6M9AA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Zfz0IXfREe2q9Pes_6M9AA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Zf0bMHfREe2q9Pes_6M9AA" type="3003" element="_ZfymAHfREe2q9Pes_6M9AA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Zf0bMXfREe2q9Pes_6M9AA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zf0bMnfREe2q9Pes_6M9AA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ZfzNE3fREe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZfzNFHfREe2q9Pes_6M9AA" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_rr4skHfdEe2SVvwkdOgLaw" type="2003" element="_rrnm0HfdEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_rr5ToHfdEe2SVvwkdOgLaw" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_rr5ToXfdEe2SVvwkdOgLaw" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_rr5TpHfdEe2SVvwkdOgLaw" type="3010" element="_rrzNAHfdEe2SVvwkdOgLaw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_rr5TpXfdEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_rr5TpnfdEe2SVvwkdOgLaw"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_rr5TonfdEe2SVvwkdOgLaw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_rr5To3fdEe2SVvwkdOgLaw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_rr4skXfdEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rr4sknfdEe2SVvwkdOgLaw"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_Zfr4UnfREe2q9Pes_6M9AA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ZfzNEHfREe2q9Pes_6M9AA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_ZfzNEXfREe2q9Pes_6M9AA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ZfxX4HfREe2q9Pes_6M9AA" name="0 - POST - https://api.ntnu.no/teachers" visible="false" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.0"/>
+      <semanticElements xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.0"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_ZfymAHfREe2q9Pes_6M9AA" labelSize="12" labelPosition="node">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@nodeMappings[name='TestStep']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@nodeMappings[name='TestStep']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_rrnm0HfdEe2SVvwkdOgLaw" name="0 - POST - https://api.ntnu.no/teachers">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.0"/>
+      <semanticElements xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.0"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_rru7kHfdEe2SVvwkdOgLaw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_rrzNAHfdEe2SVvwkdOgLaw" name="Assertion: Status code is 201">
+        <target xmi:type="StatusAssertion" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.0/@assertions.0"/>
+        <semanticElements xmi:type="StatusAssertion" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.0/@assertions.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_rr4FgHfdEe2SVvwkdOgLaw" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@subNodeMappings[name='Assertion']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@subNodeMappings[name='Assertion']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_ZfrRQXfREe2q9Pes_6M9AA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer"/>
+    <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.0"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_Zf2QYHfREe2q9Pes_6M9AA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Zf23cHfREe2q9Pes_6M9AA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_Zf23cXfREe2q9Pes_6M9AA" type="Sirius" element="_Zf2QYHfREe2q9Pes_6M9AA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_Zf8-EXfREe2q9Pes_6M9AA" visible="false" type="2001" element="_Zf6h0HfREe2q9Pes_6M9AA">
+          <children xmi:type="notation:Node" xmi:id="_Zf9lInfREe2q9Pes_6M9AA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Zf9lI3fREe2q9Pes_6M9AA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Zf-MMHfREe2q9Pes_6M9AA" type="3003" element="_Zf7v8HfREe2q9Pes_6M9AA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Zf-MMXfREe2q9Pes_6M9AA" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zf-MMnfREe2q9Pes_6M9AA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Zf9lIHfREe2q9Pes_6M9AA" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zf9lIXfREe2q9Pes_6M9AA" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_3pJIwHfdEe2SVvwkdOgLaw" type="2003" element="_3o9ikHfdEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_3pJIw3fdEe2SVvwkdOgLaw" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_3pJIxHfdEe2SVvwkdOgLaw" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_3pJIx3fdEe2SVvwkdOgLaw" type="3010" element="_3pE3UHfdEe2SVvwkdOgLaw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_3pJIyHfdEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_3pJIyXfdEe2SVvwkdOgLaw"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_3pJIxXfdEe2SVvwkdOgLaw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_3pJIxnfdEe2SVvwkdOgLaw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_3pJIwXfdEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3pJIwnfdEe2SVvwkdOgLaw"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_Zf23cnfREe2q9Pes_6M9AA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Zf8XAHfREe2q9Pes_6M9AA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_Zf8-EHfREe2q9Pes_6M9AA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Zf6h0HfREe2q9Pes_6M9AA" name="1 - GET - https://api.ntnu.no/teachers/{teacherId}" visible="false" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.1"/>
+      <semanticElements xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.1"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_Zf7v8HfREe2q9Pes_6M9AA" labelSize="12" labelPosition="node">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@nodeMappings[name='TestStep']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@nodeMappings[name='TestStep']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_3o9ikHfdEe2SVvwkdOgLaw" name="1 - GET - https://api.ntnu.no/teachers/{teacherId}">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.1"/>
+      <semanticElements xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.1"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_3pBM8HfdEe2SVvwkdOgLaw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_3pE3UHfdEe2SVvwkdOgLaw" name="Assertion: Status code is 200">
+        <target xmi:type="StatusAssertion" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.1/@assertions.0"/>
+        <semanticElements xmi:type="StatusAssertion" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.1/@assertions.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_3pH6oHfdEe2SVvwkdOgLaw" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@subNodeMappings[name='Assertion']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@subNodeMappings[name='Assertion']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_Zf2QYXfREe2q9Pes_6M9AA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer"/>
+    <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.1/@testSteps.1"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_Ej_OkHfeEe2SVvwkdOgLaw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_EkMC4HfeEe2SVvwkdOgLaw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_EkMC4XfeEe2SVvwkdOgLaw" type="Sirius" element="_Ej_OkHfeEe2SVvwkdOgLaw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_Ekp88XfeEe2SVvwkdOgLaw" type="2001" element="_EkT-sHfeEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_EkqkAHfeEe2SVvwkdOgLaw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_EkqkAXfeEe2SVvwkdOgLaw" x="31" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EktnVHfeEe2SVvwkdOgLaw" type="3017" element="_EkaFUHfeEe2SVvwkdOgLaw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_EktnVXfeEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EktnVnfeEe2SVvwkdOgLaw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Ekp88nfeEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ekp883feEe2SVvwkdOgLaw" x="64" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_EksZMHfeEe2SVvwkdOgLaw" type="2001" element="_EkaFUnfeEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_EksZM3feEe2SVvwkdOgLaw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_EksZNHfeEe2SVvwkdOgLaw" x="31" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EkuOYHfeEe2SVvwkdOgLaw" type="3017" element="_EkasYHfeEe2SVvwkdOgLaw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_EkuOYXfeEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EkuOYnfeEe2SVvwkdOgLaw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_EksZMXfeEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EksZMnfeEe2SVvwkdOgLaw" x="152" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_EktAQHfeEe2SVvwkdOgLaw" type="2003" element="_EkasYnfeEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_EktnUHfeEe2SVvwkdOgLaw" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_EktnUXfeEe2SVvwkdOgLaw" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_EkuOY3feEe2SVvwkdOgLaw" type="3010" element="_EkgzAHfeEe2SVvwkdOgLaw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_EkuOZHfeEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_EkuOZXfeEe2SVvwkdOgLaw"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_EktnUnfeEe2SVvwkdOgLaw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_EktnU3feEe2SVvwkdOgLaw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_EktAQXfeEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EktAQnfeEe2SVvwkdOgLaw" y="88"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_EkMC4nfeEe2SVvwkdOgLaw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_EkuOZnfeEe2SVvwkdOgLaw" type="4001" element="_EkmSkHfeEe2SVvwkdOgLaw" source="_EktAQHfeEe2SVvwkdOgLaw" target="_Ekp88XfeEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_Eku1cHfeEe2SVvwkdOgLaw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Eku1cXfeEe2SVvwkdOgLaw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Eku1cnfeEe2SVvwkdOgLaw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Eku1c3feEe2SVvwkdOgLaw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Eku1dHfeEe2SVvwkdOgLaw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Eku1dXfeEe2SVvwkdOgLaw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_EkuOZ3feEe2SVvwkdOgLaw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_EkuOaHfeEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EkuOaXfeEe2SVvwkdOgLaw" points="[-1, 0, 45, 60]$[-46, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EkvcgHfeEe2SVvwkdOgLaw" id="(0.5020576131687243,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EkvcgXfeEe2SVvwkdOgLaw" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_EkwDkHfeEe2SVvwkdOgLaw" type="4001" element="_Ekm5oHfeEe2SVvwkdOgLaw" source="_EktAQHfeEe2SVvwkdOgLaw" target="_EksZMHfeEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_EkwDlHfeEe2SVvwkdOgLaw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EkwDlXfeEe2SVvwkdOgLaw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EkwDlnfeEe2SVvwkdOgLaw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EkwDl3feEe2SVvwkdOgLaw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EkwDmHfeEe2SVvwkdOgLaw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EkwDmXfeEe2SVvwkdOgLaw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_EkwDkXfeEe2SVvwkdOgLaw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_EkwDknfeEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EkwDk3feEe2SVvwkdOgLaw" points="[-1, 0, -45, 60]$[44, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EkwqoHfeEe2SVvwkdOgLaw" id="(0.5020576131687243,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EkwqoXfeEe2SVvwkdOgLaw" id="(0.5,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_EkpV4HfeEe2SVvwkdOgLaw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_Ekp88HfeEe2SVvwkdOgLaw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_EkT-sHfeEe2SVvwkdOgLaw" name="Content-Type = application/json" tooltipText="Content-Type = application/json" incomingEdges="_EkmSkHfeEe2SVvwkdOgLaw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="Header" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0/@headers.0"/>
+      <semanticElements xmi:type="Header" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0/@headers.0"/>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_EkaFUHfeEe2SVvwkdOgLaw" labelSize="12" color="194,239,255">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_EkaFUnfeEe2SVvwkdOgLaw" name="Accept = application/json" tooltipText="Accept = application/json" incomingEdges="_Ekm5oHfeEe2SVvwkdOgLaw" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="Header" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0/@headers.1"/>
+      <semanticElements xmi:type="Header" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0/@headers.1"/>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_EkasYHfeEe2SVvwkdOgLaw" labelSize="12" color="194,239,255">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_EkasYnfeEe2SVvwkdOgLaw" name="0 - POST - https://api.ntnu.no/teachers" outgoingEdges="_EkmSkHfeEe2SVvwkdOgLaw _Ekm5oHfeEe2SVvwkdOgLaw">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0"/>
+      <semanticElements xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_EkdvsHfeEe2SVvwkdOgLaw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_EkgzAHfeEe2SVvwkdOgLaw" name="Assertion: Status code is 201">
+        <target xmi:type="StatusAssertion" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0/@assertions.0"/>
+        <semanticElements xmi:type="StatusAssertion" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0/@assertions.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_Ekj2UHfeEe2SVvwkdOgLaw" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@subNodeMappings[name='Assertion']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@subNodeMappings[name='Assertion']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_EkmSkHfeEe2SVvwkdOgLaw" sourceNode="_EkasYnfeEe2SVvwkdOgLaw" targetNode="_EkT-sHfeEe2SVvwkdOgLaw">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_EkmSkXfeEe2SVvwkdOgLaw" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_EkmSknfeEe2SVvwkdOgLaw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Ekm5oHfeEe2SVvwkdOgLaw" sourceNode="_EkasYnfeEe2SVvwkdOgLaw" targetNode="_EkaFUnfeEe2SVvwkdOgLaw">
+      <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Ekm5oXfeEe2SVvwkdOgLaw" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Ekm5onfeEe2SVvwkdOgLaw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_Ej_OkXfeEe2SVvwkdOgLaw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']"/>
+    <target xmi:type="APIRequest" href="ExampleTestSuite.xmi#//@testCases.0/@testSteps.0"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_Gw384HfeEe2SVvwkdOgLaw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Gw-DgHfeEe2SVvwkdOgLaw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_Gw-DgXfeEe2SVvwkdOgLaw" type="Sirius" element="_Gw384HfeEe2SVvwkdOgLaw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_Gw_4snfeEe2SVvwkdOgLaw" type="2003" element="_Gw-qkHfeEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_GxAfwHfeEe2SVvwkdOgLaw" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_GxAfwXfeEe2SVvwkdOgLaw" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_II6t4HfeEe2SVvwkdOgLaw" type="3010" element="_IIWtMHfeEe2SVvwkdOgLaw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_II6t4XfeEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_II6t4nfeEe2SVvwkdOgLaw"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_GxAfwnfeEe2SVvwkdOgLaw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_GxAfw3feEe2SVvwkdOgLaw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Gw_4s3feEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gw_4tHfeEe2SVvwkdOgLaw" x="44" y="96"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Y0xDUHfiEe2SVvwkdOgLaw" type="2001" element="_Yz2dUHfiEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_Y0xDU3fiEe2SVvwkdOgLaw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Y0xDVHfiEe2SVvwkdOgLaw" x="-2" y="-17"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Y0xqYHfiEe2SVvwkdOgLaw" type="3017" element="_Yz6uwHfiEe2SVvwkdOgLaw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_Y0xqYXfiEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y0xqYnfiEe2SVvwkdOgLaw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Y0xDUXfiEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y0xDUnfiEe2SVvwkdOgLaw" x="216" y="32" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_bOi-JHfiEe2SVvwkdOgLaw" type="2001" element="_bNtQoHfiEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_bOjlMHfiEe2SVvwkdOgLaw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_bOjlMXfiEe2SVvwkdOgLaw" x="-1" y="1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_bOjlMnfiEe2SVvwkdOgLaw" type="3004" element="_bNw7AHfiEe2SVvwkdOgLaw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_bOjlM3fiEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bOjlNHfiEe2SVvwkdOgLaw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_bOi-JXfiEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bOi-JnfiEe2SVvwkdOgLaw" x="368" y="47" width="30" height="30"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_Gw-DgnfeEe2SVvwkdOgLaw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_Y0yRcHfiEe2SVvwkdOgLaw" type="4001" element="_Y0fWgXfiEe2SVvwkdOgLaw" source="_Gw_4snfeEe2SVvwkdOgLaw" target="_Y0xDUHfiEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_Y0yRdHfiEe2SVvwkdOgLaw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y0yRdXfiEe2SVvwkdOgLaw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Y0yRdnfiEe2SVvwkdOgLaw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y0yRd3fiEe2SVvwkdOgLaw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Y0yReHfiEe2SVvwkdOgLaw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y0yReXfiEe2SVvwkdOgLaw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Y0yRcXfiEe2SVvwkdOgLaw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Y0yRcnfiEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Y0yRc3fiEe2SVvwkdOgLaw" points="[0, 0, -188, 48]$[188, -48, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Y0y4gHfiEe2SVvwkdOgLaw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Y0y4gXfiEe2SVvwkdOgLaw" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_bOjlNXfiEe2SVvwkdOgLaw" type="4001" element="_bOTGhXfiEe2SVvwkdOgLaw" source="_Gw_4snfeEe2SVvwkdOgLaw" target="_bOi-JHfiEe2SVvwkdOgLaw">
+          <children xmi:type="notation:Node" xmi:id="_bOkMQHfiEe2SVvwkdOgLaw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bOkMQXfiEe2SVvwkdOgLaw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_bOkMQnfiEe2SVvwkdOgLaw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bOkMQ3fiEe2SVvwkdOgLaw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_bOkMRHfiEe2SVvwkdOgLaw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bOkMRXfiEe2SVvwkdOgLaw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_bOjlNnfiEe2SVvwkdOgLaw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_bOjlN3fiEe2SVvwkdOgLaw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bOjlOHfiEe2SVvwkdOgLaw" points="[0, 0, -340, 33]$[340, -33, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bOkMRnfiEe2SVvwkdOgLaw" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bOkMR3fiEe2SVvwkdOgLaw" id="(0.5,0.5)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Gw_4sHfeEe2SVvwkdOgLaw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_Gw_4sXfeEe2SVvwkdOgLaw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_Gw-qkHfeEe2SVvwkdOgLaw" name="2 - GET - https://api.ntnu.no/teachers/{teacherId}" outgoingEdges="_Y0fWgXfiEe2SVvwkdOgLaw _bOTGhXfiEe2SVvwkdOgLaw">
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Gw_RoHfeEe2SVvwkdOgLaw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_IIWtMHfeEe2SVvwkdOgLaw" name="Assertion: Status code is 200 or 201">
+        <ownedStyle xmi:type="diagram:Square" uid="_IIaXkHfeEe2SVvwkdOgLaw" labelSize="12" labelPosition="node">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@subNodeMappings[name='Assertion']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@subNodeMappings[name='Assertion']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Yz2dUHfiEe2SVvwkdOgLaw" name="accept = application/json" tooltipText="accept = application/json" incomingEdges="_Y0fWgXfiEe2SVvwkdOgLaw" width="3" height="3" resizeKind="NSEW">
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_Yz6uwHfiEe2SVvwkdOgLaw" labelSize="12" color="194,239,255">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Y0fWgXfiEe2SVvwkdOgLaw" sourceNode="_Gw-qkHfeEe2SVvwkdOgLaw" targetNode="_Yz2dUHfiEe2SVvwkdOgLaw">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Y0fWgnfiEe2SVvwkdOgLaw" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Y0fWg3fiEe2SVvwkdOgLaw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@edgeMappings[name='headers']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_bNtQoHfiEe2SVvwkdOgLaw" name="teacherid" incomingEdges="_bOTGhXfiEe2SVvwkdOgLaw" width="3" height="3" resizeKind="NSEW">
+      <ownedStyle xmi:type="diagram:BundledImage" uid="_bNw7AHfiEe2SVvwkdOgLaw" labelSize="12" shape="triangle">
+        <description xmi:type="style:BundledImageDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@nodeMappings[name='Parameter']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@nodeMappings[name='Parameter']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_bOTGhXfiEe2SVvwkdOgLaw" sourceNode="_Gw-qkHfeEe2SVvwkdOgLaw" targetNode="_bNtQoHfiEe2SVvwkdOgLaw">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_bOTtkHfiEe2SVvwkdOgLaw" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@edgeMappings[name='parameters']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_bOTtkXfiEe2SVvwkdOgLaw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@edgeMappings[name='parameters']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_Gw384XfeEe2SVvwkdOgLaw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/no.ntnu.tdt4250.design/description/testsuite.odesign#//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

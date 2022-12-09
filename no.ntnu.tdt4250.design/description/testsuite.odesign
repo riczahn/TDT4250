@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="Testsuite" version="12.0.0.2017041100">
+  <ownedViewpoints name="TestSuiteManagement" label="TestSuite Management">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="TestSuite" label="TestSuitediagram" domainClass="testsuite.TestSuite" enablePopupBars="true">
+      <metamodel href="../../no.ntnu.tdt4250.testsuite/model/TestSuite.ecore#/"/>
+      <defaultLayer name="Default">
+        <containerMappings name="TestCase" semanticCandidatesExpression="[self.testCases/]" domainClass="testsuite.TestCase" childrenPresentation="List">
+          <subNodeMappings name="TestStep" semanticCandidatesExpression="[self.testSteps/]" doubleClickDescription="//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@toolSections.0/@ownedTools[name='testStepDoubleClick']" domainClass="testsuite.APIRequest">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="[ self.id + ' - ' + self.method + ' - ' + self.uri /]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="TestCase" containerMappings="//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="testsuite.TestCase" referenceName="testCases">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="NewTestCase"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ApiRequest" nodeMappings="//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@subNodeMappings[name='TestStep']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="testsuite::APIRequest" referenceName="testSteps">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="body" valueExpression="&quot;&quot;"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="testStepDoubleClick" mappings="//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']/@subNodeMappings[name='TestStep']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="TestSuite">
+        <nodeMappings name="TestSuite" semanticCandidatesExpression="[self/]" domainClass="testsuite::TestSuite">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="TestCases" sourceMapping="//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@additionalLayers[name='TestSuite']/@nodeMappings[name='TestSuite']" targetMapping="//@ownedViewpoints[name='TestSuiteManagement']/@ownedRepresentations[name='TestSuite']/@defaultLayer/@containerMappings[name='TestCase']" targetFinderExpression="[self.testCases/]">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </additionalLayers>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="TestStepManagement" label="TestStep Management">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="TestStep" initialisation="true" domainClass="testsuite.APIRequest" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <containerMappings name="TestStep" semanticCandidatesExpression="[ self /]" domainClass="testsuite.APIRequest" childrenPresentation="List">
+          <subNodeMappings name="Assertion" semanticCandidatesExpression="[ self.assertions /]" domainClass="testsuite.StatusAssertion">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="[   'Assertion: Status code is ' + self.successfulCodes->asSet()->sep(' or ') /]" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="[self.id + ' - ' + self.method + ' - ' + self.uri /]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createAssertion" nodeMappings="//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']/@subNodeMappings[name='Assertion']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="testsuite.StatusAssertion" referenceName="assertions"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="Headers" activeByDefault="true">
+        <nodeMappings name="Header" semanticCandidatesExpression="[ self.headers /]" domainClass="testsuite.Header">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelExpression="[self.key + ' = ' + self.value /]" tooltipExpression="[self.key + ' = ' + self.value /]" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="headers" sourceMapping="//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']" targetMapping="//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']" targetFinderExpression="[self.headers/]">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createHeader" nodeMappings="//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Headers']/@nodeMappings[name='Header']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="testsuite::Header" referenceName="headers"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Parameters" activeByDefault="true">
+        <nodeMappings name="Parameter" semanticCandidatesExpression="[ self.parameters /]" domainClass="testsuite.InferrableParameter">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="[ self.name /]" resizeKind="NSEW" shape="triangle">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="parameters" sourceMapping="//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@defaultLayer/@containerMappings[name='TestStep']" targetMapping="//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@nodeMappings[name='Parameter']" targetFinderExpression="[self.parameters/]">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createParameter" nodeMappings="//@ownedViewpoints[name='TestStepManagement']/@ownedRepresentations[name='TestStep']/@additionalLayers[name='Parameters']/@nodeMappings[name='Parameter']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="testsuite.InferrableParameter" referenceName="parameters"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>
