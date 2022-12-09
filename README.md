@@ -15,10 +15,11 @@ Our project is about generating java unit tests. This repository contains an ecl
 
 ## Usage
 The test code generation can be triggered in different ways.
-1. **A Model-to-Model transition**; starting from a [TestSuite](#testsuite-model) specification file, containing all the use cases in JSON format. This is done by running the TestSuiteConverter java class, located in the transitions/src/modeltomodel package, which performs the transformation.
-2. **A Model-to-Text transition**; starting from a model of the to be generated java test class, conforming to the [JavaTestModel](#javatestmodel). This transition is done by running the generateJavaCode mtl file, which is located in the transitions/src/model2text package. 
-[comment]: <> (should we explain run configurations? we probably should right)
+1. **A Model-to-Model transition**; starting from a [TestSuite](#testsuite-model) specification file, containing all the use cases in JSON format. This is done by running the TestSuiteConverter java class, located in the transitions/src/modeltomodel package, which performs the transformation. This class runs a whole stack of java classes, together building the java test model. To run the transformation, you need to run the TestSuiteConverter as an acceleo application, using these run configurations <br>
+![TestSuite UML diagram](img/m2m run configurations.png) <br>
 
+2. **A Model-to-Text transition**; starting from a model of the to be generated java test class, conforming to the [JavaTestModel](#javatestmodel). This transition is done by running the generateJavaCode mtl file, which is located in the transitions/src/model2text package. This transforms the model created with the m2m transition if done with correct run configurations. To run the transformation, you need to run the TestSuiteConverter as an acceleo application, using these run configurations <br>
+![TestSuite UML diagram](img/m2t run configurations.png)
 ## Models
 
 #### TestSuite Model
