@@ -32,8 +32,8 @@ public class LoadTestSuite {
 			destinationFile = args[1];
 		} else {
 			// default values
-			sourceFile = "../no.ntnu.tdt4250.examples/json/input.json";
-			destinationFile = "../no.ntnu.tdt4250.examples/xmi/defaultTestSuite.xmi";
+			sourceFile = "../no.ntnu.tdt4250.examples/json/ExampleJsonOne.json";
+			destinationFile = "../no.ntnu.tdt4250.examples/xmi/testsuite/ExampleTestSuiteOne.xmi";
 		}
 		
 		TestSuite testSuite = deserializeJSON(sourceFile);

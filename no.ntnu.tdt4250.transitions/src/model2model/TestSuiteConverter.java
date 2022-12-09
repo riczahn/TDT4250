@@ -14,11 +14,7 @@ public class TestSuiteConverter {
 	private static final TestSuiteHandler testSuiteHandler = new TestSuiteHandler();
 	
 	public static void main(String[] args) throws IOException {
-		transformTestSuiteModelInstanceToJavaTestModelInstance(FileHelper.EXAMPLE_TEST_SUITE_XMI_FILE);
-		
-		// or alternatively start the workflow from a JSON file
-		// t.b.d.
-		// processJsonFile(FileHelper.EXAMPLE_TEST_SUITE_JSON_FILE);
+		transformTestSuiteModelInstanceToJavaTestModelInstance(FileHelper.EXAMPLE_ONE_TESTSUITE_XMI_FILE);
 	}
 	
 	public static void transformTestSuiteModelInstanceToJavaTestModelInstance(String filename) throws IOException {
@@ -26,8 +22,8 @@ public class TestSuiteConverter {
 		
 		TestClass testClass = testSuiteHandler.convertTestSuiteToTestClass(testSuite);
 		
-		// save the instance in the same folder, with the same name but "AsJavaTestModel" before the file extension
-		String targetFilename = fileHelper.addBeforeFileExtension(filename, "AsJavaTestModel");
+		// keep the name, but adjust the file path to point to the correct directory
+		String targetFilename = fileHelper.adjustFilePathToPointToJavaModelDirectory(filename);
 		fileHelper.saveTestClassAsXmi(testClass, targetFilename);
 	}
 }

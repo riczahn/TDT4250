@@ -15,11 +15,20 @@ import testsuite.TestsuitePackage;
 public class FileHelper {
 	
 	public static final String EXAMPLES_FOLDER = "../no.ntnu.tdt4250.examples/";
+	
 	public static final String EXAMPLES_XMI_FOLDER = EXAMPLES_FOLDER + "xmi/";
+	public static final String EXAMPLES_XMI_TESTSUITE_FOLDER = EXAMPLES_XMI_FOLDER + "testsuite/";
+	public static final String EXAMPLES_XMI_JAVATESTS_FOLDER = EXAMPLES_XMI_FOLDER + "javatests/";
+	
 	public static final String EXAMPLES_JSON_FOLDER = EXAMPLES_FOLDER + "json/";
+	
 	public static final String EXAMPLES_JAVA_FOLDER = EXAMPLES_FOLDER + "java/";
-	public static final String EXAMPLE_TEST_SUITE_XMI_FILE = EXAMPLES_XMI_FOLDER + "ExampleTestSuite.xmi";
-	public static final String EXAMPLE_JAVA_MODEL_XMI_FILE = EXAMPLES_XMI_FOLDER + "ExampleTestSuiteJavaModel.xmi";
+	
+	public static final String EXAMPLE_ONE_TESTSUITE_XMI_FILE = EXAMPLES_XMI_TESTSUITE_FOLDER + "ExampleTestSuiteOne.xmi";
+	public static final String EXAMPLE_TWO_TESTSUITE_XMI_FILE = EXAMPLES_XMI_TESTSUITE_FOLDER + "ExampleTestSuiteTwo.xmi";
+	
+	public static final String EXAMPLE_ONE_JAVATEST_MODEL_XMI_FILE = EXAMPLES_XMI_JAVATESTS_FOLDER + "ExampleTestSuiteOneAsJavaModel.xmi";
+	public static final String EXAMPLE_TWO_JAVATEST_MODEL_XMI_FILE = EXAMPLES_XMI_JAVATESTS_FOLDER + "ExampleTestSuiteTwoAsJavaModel.xmi";
 	
 	public TestSuite loadTestSuiteFromXmiFile(String filepath) {
 		ResourceSet resourceSet = new ResourceSetImpl();
@@ -39,17 +48,14 @@ public class FileHelper {
 		javaModelResource.save(null);
 	}
 	
-	public String addBeforeFileExtension(String originalFilename, String x) {
-		int indexOfFileExtensionBegin = originalFilename.lastIndexOf('.');
-		String filenameWithoutExtension = originalFilename.substring(0, indexOfFileExtensionBegin);
-		String extension = originalFilename.substring(indexOfFileExtensionBegin);
-		return filenameWithoutExtension + x + extension;
-	}
-	
-	public String replaceFileExtension(String originalFilename, String desiredFileExtension) {
-		int indexOfFileExtensionBegin = originalFilename.lastIndexOf('.');
-		String filename = originalFilename.substring(0, indexOfFileExtensionBegin);
-		
-		return filename + desiredFileExtension;
+	/**
+	 * Extracts the filename from the originalFilepath and puts the path to the examples xmi javatests folder in front of it.
+	 * @param originalFilepath The path of the testsuite file
+	 * @return Corrected file path
+	 */
+	public String adjustFilePathToPointToJavaModelDirectory(String originalFilepath) {
+		int indexOfBeginOfFilename = originalFilepath.lastIndexOf('/');
+		String filename = originalFilepath.substring(indexOfBeginOfFilename);
+		return EXAMPLES_XMI_JAVATESTS_FOLDER + filename;
 	}
 }
