@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateJavaCode" name="no.ntnu.tdt4250.transitions">
     <property name="ECLIPSE_HOME" value="../../../../../../../../../../../Applications/Eclipse.app/Contents/Eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../../../../../../../eclipse-workspace"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../../../../../runtime-EclipseApplication"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="no.ntnu.tdt4250.transitions.libraryclasspath">
         <pathelement location="${ECLIPSE_WORKSPACE}/no.ntnu.tdt4250.transitions/bin"/>
-        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.3.v20220515-1416/jre/lib/jrt-fs.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.annotation.versioning_1.1.2.202109301733.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.annotation.bundle_2.0.0.202202082230.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.service.component.annotations_1.5.0.202109301733.jar"/>
