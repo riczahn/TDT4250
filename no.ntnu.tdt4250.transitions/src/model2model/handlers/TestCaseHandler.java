@@ -14,11 +14,11 @@ public class TestCaseHandler {
 	public final DependencyHandler dependencyHandler;
 	
 	public TestCaseHandler() {
-		this(new TestStepHandler(), new DependencyHandler());
+		this(new DependencyHandler());
 	}
 	
-	public TestCaseHandler(TestStepHandler testStepHandler, DependencyHandler dependencyHandler) {
-		this.testStepHandler = testStepHandler;
+	public TestCaseHandler(DependencyHandler dependencyHandler) {
+		this.testStepHandler = new TestStepHandler(dependencyHandler);
 		this.dependencyHandler = dependencyHandler;
 	}
 	

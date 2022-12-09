@@ -1,5 +1,9 @@
 
+import org.apache.hc.client5.http.classic.methods.HttpPost
+import org.apache.hc.client5.http.classic.HttpClient
 import org.junit.jupiter.api.Test
+import static org.assertj.core.api.Assertions.assertThat
+import org.apache.hc.client5.http.classic.methods.HttpGet
 
 
  class ExampleTestSuiteTwo  {
