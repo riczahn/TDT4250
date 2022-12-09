@@ -1,0 +1,41 @@
+{
+  "testSteps": [
+    {
+      "headers": {
+        "Accept": "application/json",
+        "Authentication": "dGVzdHVzZXI6cGFzc3dvcmQ=",
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "assertions": {
+        "successfulCodes": [
+          202
+        ]
+      },
+      "body": "{\"properties\":{\"location\":\"us\\/las\"}}",
+      "uri": "https://api.ionos.com/cloudapi/v5/datacenters?pretty=true&depth=0"
+    },
+    {
+      "headers": {
+        "Accept": "application/json",
+        "Authentication": "dGVzdHVzZXI6cGFzc3dvcmQ="
+      },
+      "method": "get",
+      "inferrableParameters": [
+        {
+          "name": "datacenterId",
+          "jsonPath": "id",
+          "testStepId": 1,
+          "parameterLocation": "path"
+        }
+      ],
+      "assertions": {
+        "successfulCodes": [
+          200,
+          202
+        ]
+      },
+      "uri": "https://api.ionos.com/cloudapi/v5/datacenters/{datacenterId}?pretty=true&depth=0"
+    }
+  ]
+}

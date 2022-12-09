@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<TestSuite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="platform://plugin/no.ntnu.tdt4250.testsuite/TestSuite.ecore" name="ExampleTestSuiteOne">
+  <testCases name="Test case 1">
+    <testSteps xsi:type="APIRequest" uri="https://api.ionos.com/cloudapi/v5/datacenters?pretty=true&amp;depth=0" method="POST" body="{&quot;properties&quot;:{&quot;location&quot;:&quot;us\/las&quot;}}">
+      <assertions xsi:type="StatusAssertion">
+        <successfulCodes>202</successfulCodes>
+      </assertions>
+      <headers key="Accept" value="application/json"/>
+      <headers key="Authentication" value="dGVzdHVzZXI6cGFzc3dvcmQ="/>
+      <headers key="Content-Type" value="application/json"/>
+    </testSteps>
+    <testSteps xsi:type="APIRequest" id="1" uri="https://api.ionos.com/cloudapi/v5/datacenters/{datacenterId}?pretty=true&amp;depth=0">
+      <parameters name="datacenterId" testStepId="1" jsonPath="id"/>
+      <assertions xsi:type="StatusAssertion">
+        <successfulCodes>200</successfulCodes>
+        <successfulCodes>202</successfulCodes>
+      </assertions>
+      <headers key="Accept" value="application/json"/>
+      <headers key="Authentication" value="dGVzdHVzZXI6cGFzc3dvcmQ="/>
+    </testSteps>
+  </testCases>
+</TestSuite>
