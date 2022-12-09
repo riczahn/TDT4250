@@ -1,14 +1,14 @@
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Test
 
 
- class ExampleTestSuite  {
+ class ExampleTestSuiteTwo  {
 	@Test
 	 void CreateandGetTeacher() {
 		var httpRequest0 = new HttpPost("https://api.ntnu.no/teachers");
 		httpRequest0.setHeader("Content-Type", "application/json");
 		httpRequest0.setHeader("Accept", "application/json");
-		String body0 = "{"name": "Leonardo Montecchi"}";
+		String body0 = "{\"name\": \"Leonardo Montecchi\"}";
 		httpRequest0.setEntity(new StringEntity(body));
 		var response0 = HttpClients.createDefault().execute(httpRequest);
 		assertThat(response0.getCode()).isIn(201);
@@ -26,7 +26,7 @@ import org.junit.jupiter.api.Test;
 		var httpRequest0 = new HttpPost("https://api.ntnu.no/teachers");
 		httpRequest0.setHeader("Content-Type", "application/json");
 		httpRequest0.setHeader("Accept", "application/json");
-		String body0 = "{"name": "Leonardo Montecchi"}";
+		String body0 = "{\"name\": \"Leonardo Montecchi\"}";
 		httpRequest0.setEntity(new StringEntity(body));
 		var response0 = HttpClients.createDefault().execute(httpRequest);
 		assertThat(response0.getCode()).isIn(201);

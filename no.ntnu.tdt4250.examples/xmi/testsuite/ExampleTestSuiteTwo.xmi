@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="platform://plugin/no.ntnu.tdt4250.testsuite/TestSuite.ecore"
-    name="ExampleTestSuite">
+    name="ExampleTestSuiteTwo">
   <testCases
       name="Create and Get Teacher">
     <testSteps

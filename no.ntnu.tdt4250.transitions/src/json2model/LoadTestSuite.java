@@ -32,7 +32,7 @@ public class LoadTestSuite {
 			destinationFile = args[1];
 		} else {
 			// default values
-			sourceFile = "../no.ntnu.tdt4250.examples/json/ExampleJsonOne.json";
+			sourceFile = "../no.ntnu.tdt4250.examples/json/ExampleTestSuiteOne.json";
 			destinationFile = "../no.ntnu.tdt4250.examples/xmi/testsuite/ExampleTestSuiteOne.xmi";
 		}
 		
@@ -52,7 +52,8 @@ public class LoadTestSuite {
 		JsonNode node =  objectMapper.readTree(file);
 		
 		TestSuite res = TestsuiteFactory.eINSTANCE.createTestSuite();
-		res.setName(file.getName());
+		String filenameWithoutExtension = file.getName().replaceFirst("[.][^.]+$", "");
+		res.setName(filenameWithoutExtension);
 		
 		TestCase tCase = TestsuiteFactory.eINSTANCE.createTestCase();
 		res.getTestCases().add(tCase);

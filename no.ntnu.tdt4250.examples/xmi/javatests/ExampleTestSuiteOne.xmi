@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<javatest:TestClass xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:javatest="platform://plugin/no.ntnu.tdt4250.javatestmodel/JavaTest.ecore" name="ExampleJsonOne.json">
+<javatest:TestClass xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:javatest="platform://plugin/no.ntnu.tdt4250.javatestmodel/JavaTest.ecore" name="ExampleTestSuiteOne">
   <imports>import org.junit.jupiter.api.Test</imports>
   <testMethods name="Test case 1">
     <annotations>@Test</annotations>
