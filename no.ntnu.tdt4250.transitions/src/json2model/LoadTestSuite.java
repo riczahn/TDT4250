@@ -24,14 +24,21 @@ import testsuite.TestsuiteFactory;
 public class LoadTestSuite {
 
 	public static void main(String[] args) throws IOException {
-		if (args.length != 2) {
-			System.err.println("Run with <source_file> <dest_file>");
-			return;
+		String sourceFile;
+		String destinationFile;
+		
+		if (args.length == 2) {
+			sourceFile = args[0];
+			destinationFile = args[1];
+		} else {
+			// default values
+			sourceFile = "../no.ntnu.tdt4250.examples/json/input.json";
+			destinationFile = "../no.ntnu.tdt4250.examples/xmi/defaultTestSuite.xmi";
 		}
 		
-		TestSuite testSuite = deserializeJSON(args[0]);
+		TestSuite testSuite = deserializeJSON(sourceFile);
 		
-		Resource testSuiteResource = new XMIResourceFactoryImpl().createResource(URI.createURI(args[1]));
+		Resource testSuiteResource = new XMIResourceFactoryImpl().createResource(URI.createURI(destinationFile));
 		testSuiteResource.getContents().add(testSuite);
 		testSuiteResource.save(null);
 			
