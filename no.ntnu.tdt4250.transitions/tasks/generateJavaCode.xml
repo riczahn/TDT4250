@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generateJavaCode" name="no.ntnu.tdt4250.transitions">
     <property name="ECLIPSE_HOME" value="../../../../../../../../../../../Applications/Eclipse.app/Contents/Eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../../../../../../../runtime-EclipseApplication"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../../../../../eclipse-workspace"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="no.ntnu.tdt4250.transitions.libraryclasspath">
         <pathelement location="${ECLIPSE_WORKSPACE}/no.ntnu.tdt4250.transitions/bin"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.3.v20220515-1416/jre/lib/jrt-fs.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.annotation.versioning_1.1.2.202109301733.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.annotation.bundle_2.0.0.202202082230.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.service.component.annotations_1.5.0.202109301733.jar"/>
@@ -33,6 +34,9 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen.ecore_2.31.0.v20220730-0849.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.codegen_2.22.0.v20210420-0623.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_30.1.0.v20210127-2300.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.fasterxml.jackson.core.jackson-databind_2.13.2.v20220426-1653.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.fasterxml.jackson.core.jackson-core_2.13.2.v20220426-1653.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/com.fasterxml.jackson.core.jackson-annotations_2.13.2.v20220426-1653.jar"/>
     </path>
 
     <path id="no.ntnu.tdt4250.transitions.classpath">
