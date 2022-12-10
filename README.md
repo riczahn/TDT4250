@@ -55,19 +55,9 @@ The test code generation can be triggered in different ways, depending on the st
 ![Model to Model configuration](img/m2m-conf.png)<br>
 2. **A Model-to-Text transition**; starting from a model of the to be generated java test class, conforming to the [JavaTestModel](#javatest-model). This transition is done by running the generateJavaCode mtl file, which is located in the transitions/src/model2text package. This transforms the model to an actual Java class. To run the transformation, you need to run the TestSuiteConverter as an acceleo application, use these files for an example run: <br>
 ![TestSuite UML diagram](img/m2t-conf.png)<br>
-3. **A json-to-model transition**; starting from the input json file, it's possible to transform it to an instance of the [TestSuite](#testsuite-model) model. This is done by running the LoadTestSuite Java class located in transitions/src/json2model. To run the transformation, you need to run the TestSuiteConverter as a Java application, specifying the input file and the output file as arguments. An example configuration using the test files that are in this repository is below.:<br>
-Arguments for json2model, just paste this into arguments field:
-
-        ../no.ntnu.tdt4250.examples/json/ExampleTestSuiteOne.json ../no.ntnu.tdt4250.examples/java/
-
-<br>
+3. **A json-to-model transition**; starting from the input json file, it's possible to transform it to an instance of the [TestSuite](#testsuite-model) model. This is done by running the LoadTestSuite Java class located in transitions/src/json2model. To run the transformation, you need to run the TestSuiteConverter as a Java application, specifying the input file and the output file as arguments. If no arguments, there is a default which runs the transformation on one of our examples. An example configuration using the test files that are in this repository is below.:<br>
 ![Json to model configuration](img/json2m-conf.png)<br>
 4. **A json-2-java transition**; starting from the input json file, it's possible to transform it to an actual java class, running all the intermediate steps at once. This is done by running the JsonToJavaConverter Java class located in transitions/src/json2java. To run the transformation, you need to run the it as a Java application, specifying the input file and the output file as arguments. An example configuration using the test files that are in this repository is (pay attention to the output path, it's a folder and not a file since Acceleo will name the file by itself):<br>
-Arguments for json2java, just paste this into arguments field:
-
-        ../no.ntnu.tdt4250.examples/json/ExampleTestSuiteOne.json ../no.ntnu.tdt4250.examples/java/
-
-<br>
 ![Json to java configuration](img/json2java-conf.png)<br>
 
 ### Sirius 
