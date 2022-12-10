@@ -14,12 +14,12 @@ public class DependencyHandler {
 	}
 	
 	public void addDependency(String packageName) {
-		String importStatement = "import " + packageName;
+		String importStatement = "import " + packageName + ";";
 		imports.add(importStatement);			
 	}
 	
 	public void addStaticDependency(String packageName) {
-		String importStatement = "import static " + packageName;
+		String importStatement = "import static " + packageName + ";";
 		imports.add(importStatement);
 	}
 	

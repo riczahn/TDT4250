@@ -1,9 +1,9 @@
 
-import org.apache.hc.client5.http.classic.methods.HttpPost
-import org.apache.hc.client5.http.classic.HttpClient
-import org.junit.jupiter.api.Test
-import static org.assertj.core.api.Assertions.assertThat
-import org.apache.hc.client5.http.classic.methods.HttpGet
+import org.junit.jupiter.api.Test;
+import org.apache.hc.client5.http.classic.HttpClient;
+import org.apache.hc.client5.http.classic.methods.HttpGet;
+import org.apache.hc.client5.http.classic.methods.HttpPost;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
  class ExampleTestSuiteOne  {
@@ -13,7 +13,7 @@ import org.apache.hc.client5.http.classic.methods.HttpGet
 		httpRequest0.setHeader("Accept", "application/json");
 		httpRequest0.setHeader("Authentication", "dGVzdHVzZXI6cGFzc3dvcmQ=");
 		httpRequest0.setHeader("Content-Type", "application/json");
-		String body0 = "{\"properties\":{\"location\":\"us\/las\"}}";
+		String body0 = "{\"properties\":{\"location\":\"us/las\"}}";
 		httpRequest0.setEntity(new StringEntity(body));
 		var response0 = HttpClients.createDefault().execute(httpRequest);
 		assertThat(response0.getCode()).isIn(202);

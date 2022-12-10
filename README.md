@@ -22,7 +22,7 @@ Our project is about generating java unit tests. This repository contains eclips
           202
         ]
       },
-      "body": "{\"properties\":{\"location\":\"us\\/las\"}}",
+      "body": "{\"properties\":{\"location\":\"us/las\"}}",
       "uri": "https://api.ionos.com/cloudapi/v5/datacenters?pretty=true&depth=0"
     },
     {
@@ -54,15 +54,18 @@ Our project is about generating java unit tests. This repository contains eclips
 Our goal is to generate a java class from this file, containing the unit tests. Other than that we also implemented a Sirius editor for the test suite model, to allow users to create, visualize and edit tests in a graphical interface.
 
 ## Usage
-The test code generation can be triggered in different ways.
-1. **A Model-to-Model transition**; starting from a [TestSuite](#testsuite-model) specification file, containing all the use cases in JSON format. This is done by running the TestSuiteConverter java class, located in the transitions/src/modeltomodel package, which performs the transformation. This class runs a whole stack of java classes, together building the java test model. To run the transformation, you need to run the TestSuiteConverter as an acceleo application, using these run configurations <br>
-![TestSuite UML diagram](img/m2m run configurations.png) <br>
-2. **A Model-to-Text transition**; starting from a model of the to be generated java test class, conforming to the [JavaTestModel](#javatestmodel). This transition is done by running the generateJavaCode mtl file, which is located in the transitions/src/model2text package. This transforms the model created with the m2m transition if done with correct run configurations. To run the transformation, you need to run the TestSuiteConverter as an acceleo application, using these run configurations <br>
-![TestSuite UML diagram](img/m2t run configurations.png)
-3. **A input-to-output transition**; TODO
+The test code generation can be triggered in different ways, depending on the state of the input.
+1. **A Model-to-Model transition**; starting from a [TestSuite](#testsuite-model) specification file, containing all the use cases in JSON format. This is done by running the TestSuiteConverter java class, located in the transitions/src/modeltomodel package, which performs the transformation. This class runs a whole stack of java classes, together building the java test model. To run the transformation, you need to run the TestSuiteConverter as a Java application, specifying the input file and the output file as arguments. An example configuration using the test files that are in this repository is:<br>
+![Model to Model configuration](img/m2m-conf.png)<br>
+2. **A Model-to-Text transition**; starting from a model of the to be generated java test class, conforming to the [JavaTestModel](#javatest-model). This transition is done by running the generateJavaCode mtl file, which is located in the transitions/src/model2text package. This transforms the model to an actual Java class. To run the transformation, you need to run the TestSuiteConverter as an acceleo application, use these files for an example run: <br>
+![TestSuite UML diagram](img/m2t-conf.png)<br>
+3. **A json-to-model transition**; starting from the input json file, it's possible to transform it to an instance of the [TestSuite](#testsuite-model) model. This is done by running the LoadTestSuite Java class located in transitions/src/json2model. To run the transformation, you need to run the TestSuiteConverter as a Java application, specifying the input file and the output file as arguments. An example configuration using the test files that are in this repository is:<br>
+![Json to model configuration](img/json2m-conf.png)<br>
+4. **A json-2-java transition**; starting from the input json file, it's possible to transform it to an actual java class, running all the intermediate steps at once. This is done by running the JsonToJavaConverter Java class located in transitions/src/json2java. To run the transformation, you need to run the it as a Java application, specifying the input file and the output file as arguments. An example configuration using the test files that are in this repository is (pay attention to the output path, it's a folder and not a file since Acceleo will name the file by itself):<br>
+![Json to java configuration](img/json2java-conf.png)<br>
 
 ### Sirius 
-It's possible to edit the Testsuite Model using a graphical interface made with Sirius. To do so run the `no.ntnu.tdt4250.design` as an Eclipse Application and open the `no.ntnu.tdt4250.demo` plugin. Here there is an example of a TestSuite instance as a xmi file, click on the arrow and open the `TestSuitediagram` viewpoint as shown here:
+It's possible to manage instances of the Testsuite Model using a graphical interface made with Sirius. To do so run the `no.ntnu.tdt4250.design` as an Eclipse Application and open the `no.ntnu.tdt4250.demo` plugin. Here there is an example of a TestSuite instance as a xmi file, click on the arrow and open the `TestSuitediagram` viewpoint as shown here:
 
 ![First step for Sirius](img/sirius-0.png)
 
@@ -90,7 +93,7 @@ By double clicking on a TestStep, it's possible to open the `TestStep` viewpoint
 
 ![TestSuite UML diagram](img/testsuiteUML.png)
 
-#### JavaTestModel
+#### JavaTest Model
 
 ![JavaTest UML diagram](img/javatestUML.png)
 

@@ -12,7 +12,7 @@
           202
         ]
       },
-      "body": "{\"properties\":{\"location\":\"us\\/las\"}}",
+      "body": "{\"properties\":{\"location\":\"us/las\"}}",
       "uri": "https://api.ionos.com/cloudapi/v5/datacenters?pretty=true&depth=0"
     },
     {
