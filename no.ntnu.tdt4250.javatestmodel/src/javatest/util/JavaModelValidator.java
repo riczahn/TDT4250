@@ -269,9 +269,6 @@ public class JavaModelValidator extends EObjectValidator {
 		for (String _import : testClass.getImports()) {
 			if (!_import.startsWith("import "))
 				valid = false;
-			// check that there are no spaces in the import string 
-			if (_import.substring(7).trim().contains(" "))
-				valid = false;
 			if (!_import.trim().endsWith(";"))
 				valid = false;
 		}

@@ -1,14 +1,15 @@
+package no.ntnu.tdt4250.testpackage;
 
-import org.apache.hc.client5.http.classic.methods.HttpPost
-import org.apache.hc.client5.http.classic.HttpClient
-import org.junit.jupiter.api.Test
-import static org.assertj.core.api.Assertions.assertThat
-import org.apache.hc.client5.http.classic.methods.HttpGet
+import org.junit.jupiter.api.Test;
+import org.apache.hc.client5.http.classic.HttpClient;
+import org.apache.hc.client5.http.classic.methods.HttpGet;
+import org.apache.hc.client5.http.classic.methods.HttpPost;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
  class ExampleTestSuiteTwo  {
 	@Test
-	 void CreateandGetTeacher() {
+	 void createandGetTeacher() {
 		var httpRequest0 = new HttpPost("https://api.ntnu.no/teachers");
 		httpRequest0.setHeader("Content-Type", "application/json");
 		httpRequest0.setHeader("Accept", "application/json");
@@ -26,7 +27,7 @@ import org.apache.hc.client5.http.classic.methods.HttpGet
 		
 	}
 	@Test
-	 void CreateandGetTeacherAgain() {
+	 void createandGetTeacherAgain() {
 		var httpRequest0 = new HttpPost("https://api.ntnu.no/teachers");
 		httpRequest0.setHeader("Content-Type", "application/json");
 		httpRequest0.setHeader("Accept", "application/json");

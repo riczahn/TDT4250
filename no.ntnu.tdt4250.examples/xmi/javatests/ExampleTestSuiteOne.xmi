@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ASCII"?>
-<javatest:TestClass xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:javatest="platform://plugin/no.ntnu.tdt4250.javatestmodel/JavaTest.ecore" name="ExampleTestSuiteOne">
+<javatest:TestClass xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:javatest="platform://plugin/no.ntnu.tdt4250.javatestmodel/JavaTest.ecore" name="ExampleTestSuiteOne" package="no.ntnu.tdt4250.testpackage">
   <imports>import org.junit.jupiter.api.Test;</imports>
   <imports>import org.apache.hc.client5.http.classic.HttpClient;</imports>
   <imports>import org.apache.hc.client5.http.classic.methods.HttpGet;</imports>
   <imports>import org.apache.hc.client5.http.classic.methods.HttpPost;</imports>
   <imports>import static org.assertj.core.api.Assertions.assertThat;</imports>
-  <testMethods name="Test case 1">
+  <testMethods name="testcase1">
     <annotations>@Test</annotations>
     <statements xsi:type="javatest:LineStatement" lineContent="var httpRequest0 = new HttpPost(&quot;https://api.ionos.com/cloudapi/v5/datacenters?pretty=true&amp;depth=0&quot;);"/>
     <statements xsi:type="javatest:LineStatement" lineContent="httpRequest0.setHeader(&quot;Accept&quot;, &quot;application/json&quot;);"/>

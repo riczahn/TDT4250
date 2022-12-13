@@ -21,7 +21,9 @@ public class TestSuiteHandler {
 	
 	public TestClass convertTestSuiteToTestClass(TestSuite testSuite) {
 		TestClass testClass = JavaModelFactoryImpl.eINSTANCE.createTestClass();
-		testClass.setName(testSuite.getName());
+		String className = Character.toUpperCase(testSuite.getName().charAt(0)) + testSuite.getName().substring(1);
+		testClass.setName(className.replace(" ", ""));
+		testClass.setPackage("no.ntnu.tdt4250.testpackage");
 		
 		for(TestCase testCase : testSuite.getTestCases()) {
 			Method testMethod = testCaseHandler.convertTestCaseToMethod(testCase);

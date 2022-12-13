@@ -1,3 +1,4 @@
+package no.ntnu.tdt4250.testpackage;
 
 import org.junit.jupiter.api.Test;
 import org.apache.hc.client5.http.classic.HttpClient;
@@ -8,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
  class ExampleTestSuiteOne  {
 	@Test
-	 void Testcase1() {
+	 void testcase1() {
 		var httpRequest0 = new HttpPost("https://api.ionos.com/cloudapi/v5/datacenters?pretty=true&depth=0");
 		httpRequest0.setHeader("Accept", "application/json");
 		httpRequest0.setHeader("Authentication", "dGVzdHVzZXI6cGFzc3dvcmQ=");

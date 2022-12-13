@@ -26,7 +26,8 @@ public class TestCaseHandler {
 		Method testMethod = JavaModelFactoryImpl.eINSTANCE.createMethod();
 		
 		// process each request of the test case
-		testMethod.setName(testCase.getName());
+		String methodName = Character.toLowerCase(testCase.getName().charAt(0)) + testCase.getName().substring(1);
+		testMethod.setName(methodName.replace(" ", ""));
 		for(TestStep testStep : testCase.getTestSteps()) {
 			List<Statement> statementsForTestStep = testStepHandler.convertTestStepToStatements(testStep);
 			
